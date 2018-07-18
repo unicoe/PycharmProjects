@@ -6,8 +6,8 @@
 # @Software: PyCharm Community Edition
 
 
-rf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/handle_result/nms_handle_alone_det_test_head.txt")
-wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/handle_result/merge_result_check.txt","a+")
+rf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_handle_alone_det_test_head.txt")
+wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/merge_result_check.txt","a+")
 
 content = rf.readline()
 

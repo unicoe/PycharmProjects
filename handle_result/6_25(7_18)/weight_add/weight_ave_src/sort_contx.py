@@ -23,7 +23,7 @@ def generate_all_result(path):
     print dirList, fileList
     return fileList
 
-fileList = generate_all_result("/home/user/PycharmProjects/handle_result/6_25(7_18)/handle_result/nms_merge_result_check/")
+fileList = generate_all_result("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.5")
 
 import re
 

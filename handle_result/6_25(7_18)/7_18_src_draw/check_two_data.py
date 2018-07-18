@@ -53,7 +53,6 @@ np_scores2 = np.array(scores2)
 np_scores3 = np.array(scores1[10000:30000])
 np_scores4 = np.array(scores1[30000:50000])
 
-
 np_scores5 = np.array(scores2[0:100])
 np_scores6 = np.array(scores2[5000:10000])
 
