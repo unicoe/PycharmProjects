@@ -57,9 +57,6 @@ if DEBUG:
     print '2'
 
 
-
-
-
 def compute_IoU(l1, l2):
     '''
     #the coordinate of this funcation is (x1,y1,x2,y2)
@@ -119,7 +116,9 @@ def handle_weight1(idx_name,info1, info2):
             if compute_IoU(tmp_bbox1.tolist(), tmp_bbox2.tolist()) > 0.5:
                 if vis1[idx] != 1 and vis2[idx2] != 1:
                     res_bbox = tmp_bbox1 * pro + tmp_bbox2 * (1-pro)
-                    res_scores = tmp_score1 * (1-pro) + tmp_score2 * pro
+                    res_scores = tmp_score1 * 0.7 + tmp_score2 * 0.7
+                    if res_scores[0] > 1.0:
+                        res_scores[0] = 1.0
 
                     vis1[idx] = 1
                     vis2[idx2] = 1
@@ -163,7 +162,7 @@ def handle_weight1(idx_name,info1, info2):
 
 
 def write_result(res_list):
-    wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.5.txt", "w")
+    wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.7.txt", "w")
 
     for idx in res_list:
         wf.write(idx)
