@@ -112,8 +112,8 @@ def handle_weight1(idx_name,info1, info2):
             tmp_score2 = np_info2[idx2][0:1]
 
 
-            pro = 0.5
-            if compute_IoU(tmp_bbox1.tolist(), tmp_bbox2.tolist()) > 0.5:
+            pro = 1
+            if compute_IoU(tmp_bbox1.tolist(), tmp_bbox2.tolist()) > 0.4:
                 if vis1[idx] != 1 and vis2[idx2] != 1:
                     res_bbox = tmp_bbox1 * pro + tmp_bbox2 * (1-pro)
                     res_scores = tmp_score1 * 0.7 + tmp_score2 * 0.7
@@ -162,7 +162,7 @@ def handle_weight1(idx_name,info1, info2):
 
 
 def write_result(res_list):
-    wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.7.txt", "w")
+    wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result1.0.txt", "w")
 
     for idx in res_list:
         wf.write(idx)

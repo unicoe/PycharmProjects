@@ -4,11 +4,26 @@ import cv2
 import argparse
 from matplotlib import  pyplot as plt
 
+def mkdir(path):
+    import os
+
+    path = path.strip()
+    path = path.rstrip("\\")
+
+    isExists = os.path.exists(path)
+    if not isExists:
+        os.makedirs(path)
+        print path + 'ok'
+        return True
+    else:
+        print path + 'failed!'
+        return False
+
 
 parser = argparse.ArgumentParser('create image pairs')
-parser.add_argument('--fold_A', dest='fold_A', help='input directory for image A', type=str, default='/home/user/draw_result/original/6_20_nms_det_test_person/')
-parser.add_argument('--fold_B', dest='fold_B', help='input directory for image B', type=str, default='/home/user/draw_result/6_15/nms_merge_det_result/')
-parser.add_argument('--fold_AB', dest='fold_AB', help='output directory', type=str, default='/home/user/draw_result/original/combine/11_3')
+parser.add_argument('--fold_A', dest='fold_A', help='input directory for image A', type=str, default='/home/user/Disk1.8T/draw_result/handle_result/6_25(7_18)/weight_add/result/nms_merge_result_check/')
+parser.add_argument('--fold_B', dest='fold_B', help='input directory for image B', type=str, default='/home/user/Disk1.8T/draw_result/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.77/')
+parser.add_argument('--fold_AB', dest='fold_AB', help='output directory', type=str, default='/home/user/Disk1.8T/draw_result/handle_result/6_25(7_18)/weight_add/result/combine_add_w/')
 parser.add_argument('--num_imgs', dest='num_imgs', help='number of images',type=int, default=1000000)
 parser.add_argument('--use_AB', dest='use_AB', help='if true: (0001_A, 0001_B) to (0001_AB)',action='store_true')
 args = parser.parse_args()
@@ -29,6 +44,8 @@ for sp in splits:
     num_imgs = min(args.num_imgs, len(img_list))
     print('split = %s, use %d/%d images' % (sp, num_imgs, len(img_list)))
     img_fold_AB = os.path.join(args.fold_AB, sp)
+
+    mkdir(args.fold_AB+"/test/")
     #if not os.path.isdir(img_fold_AB):
     #    os.makedirs(img_fold_AB)
 

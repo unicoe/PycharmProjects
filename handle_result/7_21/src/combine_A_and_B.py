@@ -4,11 +4,10 @@ import cv2
 import argparse
 from matplotlib import  pyplot as plt
 
-
 parser = argparse.ArgumentParser('create image pairs')
-parser.add_argument('--fold_A', dest='fold_A', help='input directory for image A', type=str, default='/home/user/draw_result/original/6_20_nms_det_test_person/')
-parser.add_argument('--fold_B', dest='fold_B', help='input directory for image B', type=str, default='/home/user/draw_result/6_15/nms_merge_det_result/')
-parser.add_argument('--fold_AB', dest='fold_AB', help='output directory', type=str, default='/home/user/draw_result/original/combine/11_3')
+parser.add_argument('--fold_A', dest='fold_A', help='input directory for image A', type=str, default='/home/user/Disk1.8T/draw_result/6_25/5_29_960_1280_det_test_person/')
+parser.add_argument('--fold_B', dest='fold_B', help='input directory for image B', type=str, default='/home/user/Disk1.8T/draw_result/6_25/nms_handle_merge_result/')
+parser.add_argument('--fold_AB', dest='fold_AB', help='output directory', type=str, default='/home/user/Disk1.8T/draw_result/6_25/17_person_13_unionms_combine/')
 parser.add_argument('--num_imgs', dest='num_imgs', help='number of images',type=int, default=1000000)
 parser.add_argument('--use_AB', dest='use_AB', help='if true: (0001_A, 0001_B) to (0001_AB)',action='store_true')
 args = parser.parse_args()
