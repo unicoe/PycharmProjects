@@ -7,7 +7,7 @@
 
 import numpy as np
 
-DEBUG = False
+DEBUG = True
 
 # save scores bboxes to dict1
 rf1 = open("/home/user/PycharmProjects/setting_weight_by_learn/weight_add/source_bbox_gt/7_25_det_test_person.txt")
@@ -39,15 +39,18 @@ content2 = rf2.readline()
 
 while content2:
 
-    tmp1 = content2.strip().split(" ")
+    tmp1 = content2.strip().split(",")
 
     pic_name1 = tmp1[0]
-    pic_info1 = map(eval, tmp1[1:])
+    #pic_info1 = map(eval, tmp1[1:])
 
-    if pic_name1 in pic_dict2:
-        pic_dict2[pic_name1].append(pic_info1)
-    else:
-        pic_dict2[pic_name1] = [pic_info1]
+    pic_info1 = []
+
+    for idx in tmp1[1:]:
+        tmp = [float(x) for x in idx.split(' ')]
+        pic_info1.append(tmp)
+
+    pic_dict2[pic_name1] = pic_info1
 
     content2 = rf2.readline()
 
@@ -108,12 +111,9 @@ def handle_weight1(idx_name,info1, info2):
         for idx2 in range(len(np_info2)):
 
             tmp_bbox1  = np_info1[idx][1:5]
-            tmp_bbox2  = np_info2[idx2][1:5]
-            tmp_score1 = np_info1[idx][0:1]
-            tmp_score2 = np_info2[idx2][0:1]
+            tmp_bbox2  = np_info2[idx2][0:4]
 
 
-            pro = 1
             if compute_IoU(tmp_bbox1.tolist(), tmp_bbox2.tolist()) > 0.5:
                 if vis1[idx] != 1 and vis2[idx2] != 1:
                     #将匹配的结果保存，结果进行分别保存
@@ -141,29 +141,6 @@ def handle_weight1(idx_name,info1, info2):
     if DEBUG:
         print vis1
         print vis2
-
-    # for idx in range(len(np_info1)):
-    #     if vis1[idx] == 0:
-    #         res_str =  idx_name \
-    #         + " " + str(np_info1[idx][0]) \
-    #         + " " + str(np_info1[idx][1]) \
-    #         + " " + str(np_info1[idx][2]) \
-    #         + " " + str(np_info1[idx][3]) \
-    #         + " " + str(np_info1[idx][4])
-    #
-    #         res_list.append(res_str)
-    #
-    # for idx2 in range(len(np_info2)):
-    #     if vis2[idx2] == 0:
-    #         res_str = idx_name \
-    #               + " " + str(np_info2[idx2][0]) \
-    #               + " " + str(np_info2[idx2][1]) \
-    #               + " " + str(np_info2[idx2][2]) \
-    #               + " " + str(np_info2[idx2][3]) \
-    #               + " " + str(np_info2[idx2][4])
-    #         res_list.append(res_str)
-
-
 
 
 def write_result(res_list):

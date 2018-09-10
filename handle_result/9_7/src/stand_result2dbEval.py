@@ -1,7 +1,7 @@
 import os
 from unicoe_tool.mkdir import mkdir
 
-readfile = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.576.txt")
+readfile = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head.txt")
 
 
 contx = readfile.readline()
@@ -10,8 +10,8 @@ details = []
 while contx:
     details = contx.replace("\n", "").split(" ")
     pathls = details[0].split('_')
-    mkdir("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.576/" + pathls[0])
-    wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.576/" + pathls[0] +"/"+pathls[1]+".txt","aw")
+    mkdir("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head/" + pathls[0])
+    wf = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head/" + pathls[0] +"/"+pathls[1]+".txt","aw")
 
     id = pathls[2][2:]
     id_int = int(id)

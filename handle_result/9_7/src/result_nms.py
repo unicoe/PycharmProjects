@@ -5,7 +5,7 @@
 # @File    : result_nms.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.576.txt")
+rf = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head.txt")
 
 content = rf.readline()
 
@@ -28,7 +28,7 @@ while content:
 #test
 #print result_dir
 
-wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.576.txt", "w")
+wf = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head.txt", "w")
 
 
 

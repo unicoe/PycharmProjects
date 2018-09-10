@@ -5,7 +5,7 @@
 # @File    : result_nms.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.576.txt")
+rf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/weight_handle_result0.44.txt")
 
 content = rf.readline()
 
@@ -28,7 +28,7 @@ while content:
 #test
 #print result_dir
 
-wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.576.txt", "w")
+wf = open("/home/user/PycharmProjects/handle_result/6_25(7_18)/weight_add/result/nms_weight_handle_result0.44.txt", "w")
 
 
 
@@ -49,7 +49,7 @@ for key in result_dir.iterkeys():
             tf_info.append(float(t_idx))
         info.append(tf_info)
     tmp_np1 = np.array(info)
-    nms_res = nms.py_cpu_nms(tmp_np1, 0.4)
+    nms_res = nms.py_cpu_nms(tmp_np1, 0.6)
     print len(tmp_np1),len(nms_res)
 
     for nms_item in nms_res:
