@@ -1,5 +1,5 @@
-rf = open("/home/user/PycharmProjects/handle_result/7_21/result/7_21_det_test_head.txt")
-wf = open("/home/user/PycharmProjects/handle_result/7_21/result/handle_7_21_det_test_head.txt","w")
+rf = open("/home/user/PycharmProjects/handle_result/9_7/result/9_7_det_test_head.txt")
+wf = open("/home/user/PycharmProjects/handle_result/9_7/result/handle_9_7_det_test_head.txt","w")
 
 content = rf.readline()
 

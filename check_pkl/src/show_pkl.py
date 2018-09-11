@@ -6,7 +6,7 @@
 # @Software: PyCharm Community Edition
 
 import cPickle as pickle
-f = open('/home/user/Disk1.8T/py-R-FCN/data/cache/voc_0712_trainval_gt_roidb.pkl')
+f = open('/home/user/PycharmProjects/check_pkl/res/voc_2007_trainval_gt_roidb.pkl')
 info = pickle.load(f)
 
 wf = open("/home/user/PycharmProjects/check_pkl/res/head_body_pkl.txt", "w")

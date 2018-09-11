@@ -5,7 +5,7 @@
 # @File    : result_nms.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head.txt")
+rf = open("/home/user/PycharmProjects/handle_result/9_7/result/handle_9_7_det_test_head.txt")
 
 content = rf.readline()
 
@@ -28,13 +28,13 @@ while content:
 #test
 #print result_dir
 
-wf = open("/home/user/PycharmProjects/handle_result/7_21/result/nms_handle_7_21_det_test_head.txt", "w")
+wf = open("/home/user/PycharmProjects/handle_result/9_7/result/nms_handle_9_7_det_test_head.txt", "w")
 
 
 
 import numpy as np
-import nms
 
+import nms
 
 for key in result_dir.iterkeys():
     tmp_np = np.array([0, 0, 0, 0, 0])

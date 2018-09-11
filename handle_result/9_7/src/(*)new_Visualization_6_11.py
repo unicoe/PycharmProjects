@@ -214,11 +214,11 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
 
-            mkdir('/home/user/Disk1.8T/draw_result/7_21/result/handle_7_21_det_test_head/test/')
-            cv2.imwrite('/home/user/Disk1.8T/draw_result/7_21/result/handle_7_21_det_test_head/test/' + str(dir_ + ".jpg"),
+            mkdir('/home/user/Disk1.8T/draw_result/9_7/result/nms_handle_9_7_det_test_head/test/')
+            cv2.imwrite('/home/user/Disk1.8T/draw_result/9_7/result/nms_handle_9_7_det_test_head/test/' + str(dir_ + ".jpg"),
                         im)
 
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/test_gt.txt")
-res_dict = generate_result("/home/user/PycharmProjects/handle_result/7_21/result/handle_7_21_det_test_head.txt")
+res_dict = generate_result("/home/user/PycharmProjects/handle_result/9_7/result/nms_handle_9_7_det_test_head.txt")
 
 show_IOU_gt_and_result(gt_dict, res_dict)
