@@ -89,13 +89,12 @@ def linreg(X1,X2,w1,w2,b1):
     #
     # print "nd.dot output : "
     # print  w1*X1 + w2*X2 + b1
-    return w1*X1 + w2*X2 + b1
+    return X1*w1 + X2*w2 + b1
 
 def squared_loss(y_hat, y):
     return nd.sqrt(nd.mean(nd.abs(y_hat - y)))
 
 def squared_loss1(y_hat, y):
-
     return nd.mean((y_hat-y)**2/2)
 
 
@@ -135,7 +134,8 @@ for epoch in range(1, num_epochs+1):
     for X1,X2,y in data_iter(batch_size, data1, data2, gt):
 
         with autograd.record():
-            l = loss(net(X1, X2, w1, w2, b1), y)
+            res = net(X1, X2, w1, w2, b1)
+            l = loss(res, y)
             print l
         l.backward()
 

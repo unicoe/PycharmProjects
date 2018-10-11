@@ -41,8 +41,8 @@ def main():
    # username=raw_input('Enter your username:')
    # password=raw_input('Enter your password:')
     while True:
-        username=''
-        password=''
+        username='1771482'
+        password='luck0821luck'
 	print time.ctime()
 	print username,password
 	check()

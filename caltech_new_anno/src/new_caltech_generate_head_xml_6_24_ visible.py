@@ -28,7 +28,7 @@ def folder_struct(level, path):
     # print fileList
     # print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/caltech_new_anno/head_vis_0.01_6_24_head_new1x.txt", "w")
+    wf = open("/home/user/PycharmProjects/caltech_new_anno/head_vis_0.35_6_24_head_new1x_test.txt", "w")
     print len(fileList)
     for fl in fileList:
         #todo 遍历txt文件，然后根据txt文件生成xml文件
@@ -108,7 +108,7 @@ def folder_struct(level, path):
             # wf.write('\n')
             pass
         #test
-        generate_xml("/home/user/PycharmProjects/caltech_new_anno/head_vis_0.01_6_24_head_new1x/", fileInfo, obj)
+        generate_xml("/home/user/PycharmProjects/caltech_new_anno/head_vis_0.35_6_24_head_new1x_test/", fileInfo, obj)
         wf.write(fl.split('.')[0])
         wf.write('\n')
     print cnt
@@ -121,4 +121,4 @@ def folder_struct(level, path):
 ２０１８年０５月０４日２２：２１：４３　　对坐标进行了限制，即最大值和最小值
 """
 #folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")
-folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
+folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_test_1xnew")

@@ -16,7 +16,7 @@ I0615 02:07:01.529983 15760 solver.cpp:244]     Train net output #4: rpn_loss_bb
 
 import re
 
-rf = open("/home/user/PycharmProjects/draw_loss_curve/logs/rfcn_end2end_ResNet-50_.txt.2018-06-27_21-15-40")
+rf = open("/home/user/PycharmProjects/draw_loss_curve/logs/train_rfcn_end2end_ResNet-50_.txt.2018-09-29_21-31-06")
 
 content = rf.readline()
 
@@ -38,31 +38,31 @@ while content:
         content = rf.readline()
         continue
 
-    get_accuarcy = re.findall(r"Train net output #\d: accuarcy = \d.\d+", content)
+    get_accuarcy = re.findall(r"Train net output #\d: accuarcy_res5c = \d.\d+", content)
     if get_accuarcy:
         ls_accuarcy.append(get_accuarcy)
         content = rf.readline()
         continue
 
-    get_loss_bbox = re.findall(r"Train net output #\d: loss_bbox = \d.\d+", content)
+    get_loss_bbox = re.findall(r"Train net output #\d: loss_bbox_res5c = \d.\d+", content)
     if get_loss_bbox:
         ls_loss_bbox.append(get_loss_bbox)
         content = rf.readline()
         continue
 
-    get_loss_cls = re.findall(r"Train net output #\d: loss_cls = \d.\d+", content)
+    get_loss_cls = re.findall(r"Train net output #\d: loss_cls_res5c = \d.\d+", content)
     if get_loss_cls:
         ls_loss_cls.append(get_loss_cls)
         content = rf.readline()
         continue
 
-    get_rpn_cls_loss = re.findall(r"Train net output #\d: rpn_cls_loss = \d.\d+", content)
+    get_rpn_cls_loss = re.findall(r"Train net output #\d: rpn_cls_loss_res4f = \d.\d+", content)
     if get_rpn_cls_loss:
         ls_rpn_cls_loss.append(get_rpn_cls_loss)
         content = rf.readline()
         continue
 
-    get_rpn_loss_bbox = re.findall(r"Train net output #\d: rpn_loss_bbox = \d.\d+", content)
+    get_rpn_loss_bbox = re.findall(r"Train net output #\d: rpn_loss_bbox_res4f = \d.\d+", content)
     if get_rpn_loss_bbox:
         ls_rpn_loss_bbox.append(get_rpn_loss_bbox)
         content = rf.readline()
@@ -87,13 +87,13 @@ def mkdir(path):
         print path + 'failed!'
         return False
 
-mkdir("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/")
-al_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_all_loss.txt", "w")
-ac_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_accuarcy.txt", "w")
-bl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_loss_bbox.txt", "w")
-cl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_loss_cls.txt", "w")
-rcl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_rpn_cls_loss.txt", "w")
-rbl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/6_27/train_rpn_loss_bbox.txt", "w")
+mkdir("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/")
+al_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_all_loss.txt", "w")
+ac_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_accuarcy.txt", "w")
+bl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_loss_bbox.txt", "w")
+cl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_loss_cls.txt", "w")
+rcl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_rpn_cls_loss.txt", "w")
+rbl_wf = open("/home/user/PycharmProjects/draw_loss_curve/logs/10_9/train_rpn_loss_bbox.txt", "w")
 
 
 
