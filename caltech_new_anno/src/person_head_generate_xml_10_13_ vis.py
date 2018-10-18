@@ -71,6 +71,31 @@ def generate_xml(file_root, file_info, obj):
         #node_ymax.text = '375'
         node_ymax.text = obj_i['ymax']
 
+
+        node_object2 = SubElement(node_root, 'object')
+        node_name2 = SubElement(node_object2, 'name')
+        node_name2.text = 'head'
+        node_name2 = SubElement(node_object2, 'difficult')
+        # node_name.text = 'mouse'
+        node_name2.text = '0'
+
+        node_bndbox2 = SubElement(node_object2, 'bndbox')
+        node_xmin2 = SubElement(node_bndbox2, 'xmin')
+        # node_xmin.text = '99'
+        node_xmin2.text = obj_i['head_xmin']
+
+        node_ymin2 = SubElement(node_bndbox2, 'ymin')
+        # node_ymin.text = '358'
+        node_ymin2.text = obj_i['head_ymin']
+
+        node_xmax2 = SubElement(node_bndbox2, 'xmax')
+        # node_xmax.text = '135'
+        node_xmax2.text = obj_i['head_xmax']
+
+        node_ymax2 = SubElement(node_bndbox2, 'ymax')
+        # node_ymax.text = '375'
+        node_ymax2.text = obj_i['head_ymax']
+
     xml = tostring(node_root, pretty_print=True)  #格式化显示，该换行的换行
     dom = parseString(xml)
     #file_root = '/home/user/Downloads/caltech_data_set/data_train/'
@@ -112,7 +137,7 @@ def folder_struct(level, path):
     # print fileList
     # print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/caltech_new_anno/new_all_9_14.txt", "w")
+    wf = open("/home/user/PycharmProjects/caltech_new_anno/head_full_newtrain1x_10_13.txt", "w")
     print len(fileList)
     for fl in fileList:
         #todo 遍历txt文件，然后根据txt文件生成xml文件
@@ -158,7 +183,7 @@ def folder_struct(level, path):
                         bbox_size = (int(xmax)-int(xmin))*(int(ymax)-int(ymin))
                         vis_bbox_size = (int(v_xmax)-int(v_xmin))*(int(v_ymax)-int(v_ymin))
 
-                        rate = vis_bbox_size / (bbox_size + 0.5)
+                        rate = vis_bbox_size / (bbox_size + 0.0)
 
 
                     # x1 = (xmax - xmin)/2. + 0.2*((xmax - xmin)/2.)
@@ -166,18 +191,30 @@ def folder_struct(level, path):
                     # y1 = (ymax - ymin)/2. + 0.1*((ymax - ymin)/2.)
                     # y2 = (ymax - ymin)/2. + 0.9*((ymax - ymin)/2.)
 
-                    if tmpv[5] == '0' or rate > 0.2:
-                        cor_dict = {}
-                        # 生成全身bbox
-                        cor_dict["xmin"] = xmin
-                        cor_dict["ymin"] = ymin
-                        cor_dict["xmax"] = xmax
-                        cor_dict["ymax"] = ymax
+                    if tmpv[5] == '0' or rate >= 0.3:
+                        w = int(xmax) - int(xmin)  # w
+                        h = int(ymax) - int(ymin)  # h
+                        if w > 3 and h > 20:
+                            cor_dict = {}
+                            # 生成全身bbox
+                            cor_dict["xmin"] = xmin
+                            cor_dict["ymin"] = ymin
+                            cor_dict["xmax"] = xmax
+                            cor_dict["ymax"] = ymax
 
-                        rate = 0
-                # wf.write(str(tmpv))
-                # wf.write('\n')
-                        print cor_dict
+                            tmp_y = ymax
+
+                            #生成头肩bbox
+                            ymax = str(int(int(ymin) + 0.35 * (int(tmp_y) - int(ymin))))
+                            cor_dict["head_xmin"] = xmin
+                            cor_dict["head_ymin"] = ymin
+                            cor_dict["head_xmax"] = xmax
+                            cor_dict["head_ymax"] = ymax
+                            obj.append(cor_dict)
+                            rate = 0
+                    # wf.write(str(tmpv))
+                    # wf.write('\n')
+                            print cor_dict
             else:
                 if flag == 0:
                     fileInfo.append("VOC0712")
@@ -191,7 +228,7 @@ def folder_struct(level, path):
             # wf.write('\n')
             pass
         #test
-        generate_xml("/home/user/PycharmProjects/caltech_new_anno/new_all_9_14/", fileInfo, obj)
+        generate_xml("/home/user/PycharmProjects/caltech_new_anno/head_full_new1x_10_13/", fileInfo, obj)
         wf.write(fl.split('.')[0])
         wf.write('\n')
     print cnt
@@ -203,13 +240,4 @@ def folder_struct(level, path):
 生成头肩、全身的标注，用来训练，
 """
 #folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")
-folder_struct(1, "/home/user/Disk1.8T/data_set/train/annotations")
-
-
-
-"""
-
-find /home/user/Disk1.8T/data_set/train/Annotations_all/ -name "*.xml" | xargs -i cp {} /home/user/Disk1.8T/faster-rcnn.pytorch/data/VOCdevkit2007/VOC2007/Annotations_all/
-
-find  /home/user/Downloads/caltech_data_set/datasets/caltech_all_train/train/images/ -name "*.jpg" | xargs -i cp {} /home/user/Disk1.8T/faster-rcnn.pytorch/data/VOCdevkit2007/VOC2007/JPEGImages2/
-"""
+folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
