@@ -102,3 +102,10 @@ plt.plot((0,3000),(1024,1024),'g-')
 plt.plot((0,3000),(2666,2666),'g-')
 plt.savefig("/home/user/PycharmProjects/caltech_new_anno/src/visualable_code/check_test_set_area_10_18.png")
 plt.show()
+
+
+"""
+测试集所有标注的统计
+
+不是reasonable的统计
+"""

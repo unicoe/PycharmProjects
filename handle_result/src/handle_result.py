@@ -5,8 +5,8 @@
 # @File    : handle_result.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/handle_result/check_point_6_13/611_det_test_person.txt")
-wf = open("/home/user/PycharmProjects/handle_result/check_point_6_13/check_eval/handle_0.1_611_det_test_person","w")
+rf = open("/home/user/PycharmProjects/handle_result/10_16/comp4_10_16_09_08_det_test_person.txt")
+wf = open("/home/user/PycharmProjects/handle_result/10_16/filter_comp4_10_16_09_08_det_test_person.txt","w")
 
 content = rf.readline()
 

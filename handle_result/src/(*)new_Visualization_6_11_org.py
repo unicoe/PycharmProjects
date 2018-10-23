@@ -18,11 +18,11 @@ def mkdir(path):
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
-        print path + 'ok'
+        print(path + 'ok')
         return True
     else:
 
-        print path + 'failed!'
+        print(path + 'failed!')
         return False
 
 def generate_result(resource_path):
@@ -72,7 +72,7 @@ def generate_gt_dict(resource_path):
 
         #--test--
         if cls == "set06_V002_I01499":
-            print bbox
+            print(bbox)
 
         if cls in tmp_dict:
             tmp_dict[cls].append(bbox)
@@ -108,7 +108,7 @@ def compute_IoU(l1, l2):
     area2 = (l2[2]-l2[0])*(l2[3]-l2[1])
 
     intersectionPercent = intersection/(area1+area2-intersection + 0.0)
-    print "IoU = " + str(intersectionPercent)
+    print("IoU = " + str(intersectionPercent))
     return intersectionPercent
 
 def str2float_in_list(str_list):
@@ -147,8 +147,8 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 # [375.544632086852,172.740631992242,22.3884197828709,49.0229191797346]
                 # '475 172 488 225'
                 if dir_ == "set06_V002_I01499":
-                    print idx_gt
-                    print "check point"
+                    print(idx_gt)
+                    print("check point")
 
                 for idx_detail in idx_gt:
                     gt_detail = idx_detail.split(" ")
@@ -185,6 +185,15 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
 
                             cv2.putText(im, str(str(iou_res) + " " + str(idx_res[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                                         (255, 255, 0))
+
+                            # wf = open("/home/user/PycharmProjects/handle_result/10_17/check.txt", 'a')
+                            # wf.write(str(iou_res) + ' ' + str(idx_res[0]) + ' w: ' + str(res_x2-res_x1) + ' h: ' + str(res_y2-res_y1))
+                            # wf.write('\n')
+                            #
+                            # wf = open("/home/user/PycharmProjects/handle_result/10_17/check_area.txt", 'a')
+                            # wf.write(
+                            #       str(idx_res[0]) + ' ' + str((res_x2 - res_x1)* (res_y2 - res_y1)))
+                            # wf.write('\n')
                             if idx_res in tmp_list:
                                 tmp_list.remove(idx_res)
                             resList.remove(idx_res)
@@ -197,7 +206,7 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                                 tmp_list.append(idx_res)
 
             for idx_tmp in tmp_list:
-                if float(idx_tmp[0]) < 0.01:
+                if float(idx_tmp[0]) < 0.1:
                     continue
                 res_x1 = int(float(idx_tmp[1]))
                 res_y1 = int(float(idx_tmp[2]))
@@ -213,12 +222,14 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-
-            mkdir('/home/user/Disk1.8T/draw_result/10_9/comp4_10_11_18_56_det_test_person/test/')
-            cv2.imwrite('/home/user/Disk1.8T/draw_result/10_9/comp4_10_11_18_56_det_test_person/test/' + str(dir_ + ".jpg"),
+            save_path = '/home/user/Disk1.8T/draw_result/10_17/comp4_2336f4bc-b790-4a4c-8870-068fd783f067_det_test_person/test/'
+            mkdir(save_path)
+            cv2.imwrite(save_path + str(dir_ + ".jpg"),
                         im)
 
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/test_gt.txt")
-res_dict = generate_result("/home/user/PycharmProjects/handle_result/10_9/comp4_10_11_18_56_det_test_person.txt")
 
+
+file_path = "/home/user/PycharmProjects/handle_result/10_17/comp4_2336f4bc-b790-4a4c-8870-068fd783f067_det_test_person.txt"
+res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)

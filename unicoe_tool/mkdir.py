@@ -7,8 +7,8 @@ def mkdir(path):
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
-        print path + 'ok'
+        print(path + 'ok')
         return True
     else:
-        print path + 'failed!'
+        print(path + 'failed!')
         return False

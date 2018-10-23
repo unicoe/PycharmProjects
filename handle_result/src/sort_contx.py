@@ -24,7 +24,7 @@ def generate_all_result(path):
     return fileList
 
 fileList = generate_all_result(""
-"/home/user/PycharmProjects/handle_result/10_9/comp4_10_11_18_56_det_test_person")
+"/home/user/PycharmProjects/handle_result/10_17/comp4_0e007648-6c6f-423c-9e62-ab7e975065ab_det_test_person")
 
 import re
 
