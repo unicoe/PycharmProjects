@@ -1,7 +1,7 @@
 import os
 from unicoe_tool.mkdir import mkdir
 
-readfile = open("/home/user/PycharmProjects/handle_result/10_17/comp4_0e007648-6c6f-423c-9e62-ab7e975065ab_det_test_person.txt")
+readfile = open("/home/user/PycharmProjects/handle_result/10_23/comp4_c92a6e53-20ff-4536-be4c-cfbe1813bcad_det_test_person.txt")
 
 
 contx = readfile.readline()
@@ -12,7 +12,7 @@ while contx:
     print(details)
     pathls = details[0].split('_')
 
-    save_path = "/home/user/PycharmProjects/handle_result/10_17/comp4_0e007648-6c6f-423c-9e62-ab7e975065ab_det_test_person/"
+    save_path = "/home/user/PycharmProjects/handle_result/10_23/comp4_c92a6e53-20ff-4536-be4c-cfbe1813bcad_det_test_person/"
     mkdir(save_path + pathls[0])
     wf = open(save_path + pathls[0] +"/"+pathls[1]+".txt","aw")
 

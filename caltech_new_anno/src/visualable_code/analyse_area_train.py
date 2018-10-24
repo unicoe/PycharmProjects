@@ -13,7 +13,6 @@ rf = open("/home/user/PycharmProjects/caltech_new_anno/src/visualable_code/train
 
 content = rf.readline()
 
-
 areas = []
 index = []
 i = 0
@@ -26,7 +25,6 @@ while content:
     i = i + 1
     content = rf.readline()
     # pdb.set_trace()
-
 
 np_areas = np.asarray(areas)
 
@@ -75,13 +73,16 @@ gt areas
 
 [95-  ] 496     496     1941
 
+高度在不同情况下,区间拥有个数的分布
+
 tmp
 [20-30] 581
 [20-35] 1037
 [20-40] 1485
 [20-45] 1990
-[20-50] 2441
 
+
+[20-50] 2441
 [20-55] 2815
 [20-60] 3040
 [20-65] 3236
@@ -95,7 +96,6 @@ tmp
 """
 
 # pdb.set_trace()
-
 
 
 plt.plot(index, areas,  'ro')
