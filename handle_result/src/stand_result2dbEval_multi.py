@@ -39,21 +39,15 @@ def handle_result_for_eval(file_path, save_path):
             wf.write("\n")
         contx = readfile.readline()
 
-file_path1 = "/home/user/PycharmProjects/handle_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person.txt"
-save_path1 = "/home/user/PycharmProjects/handle_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person"
-handle_result_for_eval(file_path1,save_path1)
+path_lst = [
+'/home/user/PycharmProjects/handle_result/11_1/1/comp4_3798c70a-996a-478a-a620-3a15b875e166_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/11_1/1/comp4_74501413-4641-4f04-923a-93d9bda870a7_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/11_1/1/comp4_ec4357a2-3945-40fb-9195-47bc4946bcc0_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/11_1/1/comp4_f0cbc086-9756-47e5-b635-4b7f58057196_det_test_person.txt',
+]
+
+for pth_idx in path_lst:
+    save_path1 = pth_idx.split(".")[0]
+    handle_result_for_eval(pth_idx, save_path1)
 
 
-file_path2 = "/home/user/PycharmProjects/handle_result/10_23/comp4_a2af19d5-45cc-499d-bbb6-7fce84eb0fa6_det_test_person.txt"
-save_path2 = "/home/user/PycharmProjects/handle_result/10_23/comp4_a2af19d5-45cc-499d-bbb6-7fce84eb0fa6_det_test_person"
-handle_result_for_eval(file_path2,save_path2)
-
-
-file_path3 = "/home/user/PycharmProjects/handle_result/10_23/comp4_b67919a0-ade6-43f3-96e6-c7be425f5128_det_test_person.txt"
-save_path3 = "/home/user/PycharmProjects/handle_result/10_23/comp4_b67919a0-ade6-43f3-96e6-c7be425f5128_det_test_person"
-handle_result_for_eval(file_path3,save_path3)
-
-
-file_path4 = "/home/user/PycharmProjects/handle_result/10_23/comp4_f61c1015-4e7c-4ade-b2ab-a8078fadc721_det_test_person.txt"
-save_path4 = "/home/user/PycharmProjects/handle_result/10_23/comp4_f61c1015-4e7c-4ade-b2ab-a8078fadc721_det_test_person"
-handle_result_for_eval(file_path4,save_path4)

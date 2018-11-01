@@ -28,7 +28,7 @@ def folder_struct(level, path):
     # print fileList
     # print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/caltech_new_anno/train1x_vis0.6_h50.txt", "w")
+    wf = open("/home/user/PycharmProjects/caltech_new_anno/zss_train1x_10_30_1x_0.3_40_10.txt", "w")
     print len(fileList)
     for fl in fileList:
         #todo 遍历txt文件，然后根据txt文件生成xml文件
@@ -60,24 +60,31 @@ def folder_struct(level, path):
                 tmpv = contx.split(" ")
 
                 if tmpv[0] == "person":
-                    xmin = str(max(1,int(tmpv[1])))
-                    ymin = str(max(1,int(tmpv[2])))
-                    xmax = str(min(int(tmpv[1]) + int(tmpv[3]),640))
-                    ymax = str(min(int(tmpv[2]) + int(tmpv[4]), 480))
+                    for idx in range(1,5):
+                        tmpv[idx] = int(float(tmpv[idx]))
+                        tmpv[idx+5] = int(float(tmpv[idx+5]))
+
+                    xmin = str(max(1,tmpv[1]))
+                    ymin = str(max(1,tmpv[2]))
+                    xmax = str(min(tmpv[1] + tmpv[3],640))
+                    ymax = str(min(tmpv[2] + tmpv[4], 480))
 
                     if tmpv[5] == '1':
-                        v_xmin = str(max(1, int(float(tmpv[6]))))
-                        v_ymin = str(max(1, int(float(tmpv[7]))))
-                        v_xmax = str(min(int(float(tmpv[6])) + int(float(tmpv[8])), 640))
-                        v_ymax = str(min(int(float(tmpv[7])) + int(float(tmpv[9])), 480))
+                        v_xmin = str(max(1, tmpv[6]))
+                        v_ymin = str(max(1, tmpv[7]))
+                        v_xmax = str(min(tmpv[6] + tmpv[8], 640))
+                        v_ymax = str(min(tmpv[7] + tmpv[9], 480))
 
                         bbox_size = (int(xmax) - int(xmin)) * (int(ymax) - int(ymin))
                         vis_bbox_size = (int(v_xmax) - int(v_xmin)) * (int(v_ymax) - int(v_ymin))
 
                         rate = vis_bbox_size / (bbox_size + 0.0)
 
-                    if tmpv[5] == '0' or rate > 0.3:
-                        if int(v_ymax) - int(v_ymin) > 20:
+                    w = int(xmax) - int(xmin)
+                    h = int(ymax) - int(ymin)
+
+                    if tmpv[5] == '0' or rate >= 0.3:
+                        if h >= 40 and w >= 10:
                             cor_dict = {}
                             cor_dict["xmin"] = xmin
                             cor_dict["ymin"] = ymin
@@ -99,17 +106,14 @@ def folder_struct(level, path):
             # wf.write('\n')
             pass
         #test
-        generate_xml("/home/user/PycharmProjects/caltech_new_anno/10_25_original_1x_0.3_20_3/", fileInfo, obj)
-        wf.write(fl.split('.')[0])
-        wf.write('\n')
+        if len(obj) != 0:
+            generate_xml("/home/user/PycharmProjects/caltech_new_anno/zss_train1x_10_30_1x_0.3_40_10/", fileInfo, obj)
+            wf.write(fl.split('.')[0])
+            wf.write('\n')
     print cnt
-    #wf.write(cnt)
     pass
     wf.close()
 
-"""
-这里替换不同的数据集，从而生成不同的ｘｍｌ文件
-２０１８年０５月０４日２２：２１：４３　　对坐标进行了限制，即最大值和最小值
-"""
+
 #folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")
-folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx1/train/annotations")
+folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")

@@ -1,4 +1,8 @@
 #--coding:utf-8--
+"""
+生成body head的标注
+"""
+
 import os
 
 def mkdir(path):
@@ -108,7 +112,7 @@ def folder_struct(level, path):
     # print fileList
     # print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/caltech_new_anno/txt_folder/person_10_29_vis0.3_h40_w3.txt", "w")
+    wf = open("/home/user/PycharmProjects/caltech_new_anno/src/visualable_code/txt_person_10_11_vis0.3.txt", "w")
     print len(fileList)
     for fl in fileList:
         #todo 遍历txt文件，然后根据txt文件生成xml文件
@@ -127,65 +131,45 @@ def folder_struct(level, path):
 
         while contx:
             contx = rtmp.readline()
-            if contx:
 
-                if flag == 0:
-                    fileInfo.append("VOC0712")
-                    fileInfo.append(fl.split('.')[0]+'.jpg')
-                flag = 1
 
-                cnt += 1
-                cor_dict = {}
-                tmpv = []
-                tmpv = contx.split(" ")
-                print tmpv
-                if tmpv[0] == "person":
-                    xmin = str(max(1,int(float(tmpv[1]))))
-                    ymin = str(max(1,int(float(tmpv[2]))))
-                    xmax = str(min(int(float(tmpv[1])) + int(float(tmpv[3])),640))
-                    ymax = str(min(int(float(tmpv[2])) + int(float(tmpv[4])), 480))
+            cnt += 1
+            cor_dict = {}
+            tmpv = []
+            tmpv = contx.split(" ")
+            print tmpv
+            if tmpv[0] == "person":
+                xmin = str(max(1,int(float(tmpv[1]))))
+                ymin = str(max(1,int(float(tmpv[2]))))
+                xmax = str(min(int(float(tmpv[1])) + int(float(tmpv[3])),640))
+                ymax = str(min(int(float(tmpv[2])) + int(float(tmpv[4])), 480))
 
-                    if tmpv[5] == '1':
-                        v_xmin = str(max(1,int(float(tmpv[6]))))
-                        v_ymin = str(max(1,int(float(tmpv[7]))))
-                        v_xmax = str(min(int(float(tmpv[6])) + int(float(tmpv[8])),640))
-                        v_ymax = str(min(int(float(tmpv[7])) + int(float(tmpv[9])),480))
+                if tmpv[5] == '1':
+                    v_xmin = str(max(1,int(float(tmpv[6]))))
+                    v_ymin = str(max(1,int(float(tmpv[7]))))
+                    v_xmax = str(min(int(float(tmpv[6])) + int(float(tmpv[8])),640))
+                    v_ymax = str(min(int(float(tmpv[7])) + int(float(tmpv[9])),480))
 
-                        bbox_size = (int(xmax)-int(xmin))*(int(ymax)-int(ymin))
-                        vis_bbox_size = (int(v_xmax)-int(v_xmin))*(int(v_ymax)-int(v_ymin))
+                    bbox_size = (int(xmax)-int(xmin))*(int(ymax)-int(ymin))
+                    vis_bbox_size = (int(v_xmax)-int(v_xmin))*(int(v_ymax)-int(v_ymin))
 
-                        rate = vis_bbox_size / (bbox_size + 0.5)
+                    rate = vis_bbox_size / (bbox_size + 0.5)
 
-                    if tmpv[5] == '0' or rate >= 0.3:
-                        w = int(xmax)-int(xmin) #w
-                        h = int(ymax)-int(ymin) #h
-                        if w >= 10 and h >= 40:
-                            cor_dict = {}
-                            # 生成全身bbox
-                            cor_dict["xmin"] = xmin
-                            cor_dict["ymin"] = ymin
-                            cor_dict["xmax"] = xmax
-                            cor_dict["ymax"] = ymax
+                if tmpv[5] == '0' or rate >= 0.3:
+                    w = int(xmax)-int(xmin) #w
+                    h = int(ymax)-int(ymin) #h
+                    if w > 3 and h > 20:
+                        # 生成全身bbox
 
-                            obj.append(cor_dict)
-                            rate = 0
+                        wf.write(str(w*h))
+                        wf.write('\n')
 
-            else:
-                if flag == 0:
-                    fileInfo.append("VOC0712")
-                    fileInfo.append(fl.split('.')[0]+'.jpg')
-                flag = 1
+                        rate = 0
+
+
         #train
-        if flag == 1:
-            #generate_xml("/home/user/PycharmProjects/caltech_new_anno/annos/", fileInfo, obj)
-            #print fl
-            #wf.write(fl.split('.')[0])
-            # wf.write('\n')
-            pass
-        #test
-        generate_xml("/home/user/PycharmProjects/caltech_new_anno/person_10_29_vis0.3_h40_w3/", fileInfo, obj)
-        wf.write(fl.split('.')[0])
-        wf.write('\n')
+
+
     print cnt
     #wf.write(cnt)
     pass
@@ -195,4 +179,4 @@ def folder_struct(level, path):
 生成头肩、全身的标注，用来训练，
 """
 #folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")
-folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
+folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_test_1xnew")

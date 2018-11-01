@@ -178,22 +178,12 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
 
                         iou_res = round(compute_IoU(gt_l, res_l), 2)
 
-
-                    # 这里还是有问题，画出结果不对
                         if iou_res > 0.5:
                             cv2.rectangle(im, (res_x1, res_y1), (res_x2, res_y2), (255, 255, 0), 1)
 
                             cv2.putText(im, str(str(iou_res) + " " + str(idx_res[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                                         (255, 255, 0))
 
-                            # wf = open("/home/user/PycharmProjects/handle_result/10_17/check.txt", 'a')
-                            # wf.write(str(iou_res) + ' ' + str(idx_res[0]) + ' w: ' + str(res_x2-res_x1) + ' h: ' + str(res_y2-res_y1))
-                            # wf.write('\n')
-                            #
-                            # wf = open("/home/user/PycharmProjects/handle_result/10_17/check_area.txt", 'a')
-                            # wf.write(
-                            #       str(idx_res[0]) + ' ' + str((res_x2 - res_x1)* (res_y2 - res_y1)))
-                            # wf.write('\n')
                             if idx_res in tmp_list:
                                 tmp_list.remove(idx_res)
                             resList.remove(idx_res)
@@ -222,14 +212,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/10_17/comp4_2336f4bc-b790-4a4c-8870-068fd783f067_det_test_person/test/'
+            save_path = '/home/user/Disk1.8T/draw_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person/test/'
             mkdir(save_path)
-            cv2.imwrite(save_path + str(dir_ + ".jpg"),
-                        im)
+            cv2.imwrite(save_path + str(dir_ + ".jpg"), im)
 
-gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/test_gt.txt")
+gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/new_zss_6_9_test_gt.txt")
 
 
-file_path = "/home/user/PycharmProjects/handle_result/10_17/comp4_2336f4bc-b790-4a4c-8870-068fd783f067_det_test_person.txt"
+file_path = "/home/user/PycharmProjects/handle_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person.txt"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)
