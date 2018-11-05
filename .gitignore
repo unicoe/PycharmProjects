@@ -2,3 +2,6 @@
 *.txt
 *.jpg
 *.2018*
+*.json
+*.mat
+*.png
