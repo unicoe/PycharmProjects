@@ -124,7 +124,7 @@ def str2float_in_list(str_list):
     return float_list
 
 def show_IOU_gt_and_result(gt_dict, res_dict):
-    cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages/"
+    cur_path = "/home/user/unicoe/py-R-FCN1/data/VOCdevkit0712/VOC0712/JPEGImages/"
     dirList = []
     fileList = []
     files = os.listdir(cur_path)
@@ -219,6 +219,6 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/new_zss_6_9_test_gt.txt")
 
 
-file_path = "/home/user/PycharmProjects/handle_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person.txt"
+file_path = "/home/user/PycharmProjects/handle_result/det_result/10_23/comp4_83769cde-202d-4f47-abf1-eaa9cb4609ec_det_test_person.txt"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)

@@ -40,10 +40,7 @@ def handle_result_for_eval(file_path, save_path):
         contx = readfile.readline()
 
 path_lst = [
-'/home/user/PycharmProjects/handle_result/11_1/1/comp4_3798c70a-996a-478a-a620-3a15b875e166_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/11_1/1/comp4_74501413-4641-4f04-923a-93d9bda870a7_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/11_1/1/comp4_ec4357a2-3945-40fb-9195-47bc4946bcc0_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/11_1/1/comp4_f0cbc086-9756-47e5-b635-4b7f58057196_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/det_result/11_2/comp4_552c43e1-7209-4a15-b1ee-2a4f5ed245ce_det_test_person.txt',
 ]
 
 for pth_idx in path_lst:
