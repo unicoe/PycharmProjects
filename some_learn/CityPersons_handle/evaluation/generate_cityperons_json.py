@@ -4,6 +4,11 @@
 # @Email   : unicoe@163.com
 # @File    : generate_cityperons_json.py
 # @Software: PyCharm Community Edition
+
+"""
+生成coco的检测结果格式
+
+"""
 import copy
 
 
@@ -20,8 +25,8 @@ img_dir  = {}
 while content:
     result_info = content.strip("\n").split("/")[1]
 
-    im_name = result_info.split(" ")[0]
-    info_str = result_info[36:]
+    im_name  = result_info.split(" ")[0]
+    info_str = result_info.split(" ")[1:]
 
     if im_name in img_dir:
         img_dir[im_name].append(info_str)
@@ -60,7 +65,7 @@ for im_idx in img_list:
         dt_info["image_id"]    = int(cnt)
         dt_info["category_id"] = int(1)
         for dt_idx in img_dir[im_idx]:
-            bbox_ls = dt_idx.split(" ")[1:5]
+            bbox_ls = dt_idx[1:5]
             for box_idx in range(len(bbox_ls)):
                 bbox_ls[box_idx]  = float(bbox_ls[box_idx])
 
@@ -69,7 +74,10 @@ for im_idx in img_list:
 
             dt_info["bbox"] = (bbox_ls)
 
-            dt_info["score"] = (float(dt_idx.split(" ")[0]))
+            dt_info["score"] = (float(dt_idx[0]))
+            #--debug
+            # if (float(dt_idx[0])) == 2.0:
+            #     print(im_idx)
             dt_coco.append(copy.deepcopy(dt_info))
 
         cnt += 1

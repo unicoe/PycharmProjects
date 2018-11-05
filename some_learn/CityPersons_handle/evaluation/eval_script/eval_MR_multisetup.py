@@ -21,7 +21,7 @@ class COCOeval:
     #
     # The evaluation parameters are as follows (defaults in brackets):
     #  imgIds     - [all] N img ids to use for evaluation
-    #  catIds     - [all] K cat ids to use for evaluation
+    #  catIds     - [all] K category ids to use for evaluation
     #  iouThrs    - [.5:.05:.95] T=10 IoU thresholds for evaluation
     #  recThrs    - [0:.01:1] R=101 recall thresholds for evaluation
     #  areaRng    - [...] A=4 object area ranges for evaluation

@@ -212,13 +212,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/11_5/couple-4k/test/'+dir_.split("/")[0]+ "/"
+            save_path = '/home/user/Disk1.8T/draw_result/11_5/handle_couple-4k/test/'+dir_.split("/")[0]+ "/"
             mkdir(save_path)
             cv2.imwrite(save_path + str(dir_.split("/")[1]+ ".png"), im)
 
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/info_txt.txt")
 
 
-file_path = "/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/couple-4k.txt"
+file_path = "/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/handle_couple-4k.txt"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)
