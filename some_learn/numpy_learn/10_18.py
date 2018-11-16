@@ -217,4 +217,7 @@ b = np.hsplit(a,2)
 
 
 
+a[a>=0] = 1
+print a
+
 #pdb.set_trace()

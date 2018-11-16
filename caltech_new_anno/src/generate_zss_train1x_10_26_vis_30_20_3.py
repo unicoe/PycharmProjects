@@ -83,7 +83,7 @@ def folder_struct(level, path):
                     w = int(xmax) - int(xmin)
                     h = int(ymax) - int(ymin)
 
-                    if tmpv[5] == '0' or rate >= 0.3:
+                    if tmpv[5] == '0' or rate >= 0.4:
                         if h >= 40 and w >= 10:
                             cor_dict = {}
                             cor_dict["xmin"] = xmin

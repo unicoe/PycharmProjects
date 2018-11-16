@@ -12,17 +12,13 @@
 import copy
 import eval_demo
 
-file_name = \
-"/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/result/comp4_dbe84649-1412-48d8-82d2-663ae4b8ac3f_det_test_person.txt"
 
 file_list = [
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_9b124458-ab46-4d1a-be06-30d0db6741f1_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_19f9340c-0acb-4db0-9e55-2f4ce6ef31ce_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_6ba20c8e-5d94-45b6-949a-8d655857b29e_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_0701e80a-015f-4179-93f0-c2e0899a3e01_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_6eb674e2-09a4-44c4-bd50-bd461ff5e9c3_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_5b3d3a26-7653-44b3-ab0f-5edaa17d0e5c_det_test_person.txt',
-'/home/user/Disk1.8T/unicoe/py-R-FCN/data/VOCdevkit0712/results/VOC0712/Main/comp4_0aaaa9f6-95e6-42db-bec8-5b0a105b6788_det_test_person.txt',
+#'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/11_13/0/comp4_a7e8f78e-5da1-4f8b-9349-12bbf3b57148_det_test_person.txt',
+
+'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/result/couple-1k.txt',
+'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/result/couple-4k.txt',
+
 ]
 
 def generate_json(file_name):

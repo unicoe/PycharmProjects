@@ -6,3 +6,5 @@
 *.mat
 *.png
 *.pyc
+/500
+/PyTorch-book

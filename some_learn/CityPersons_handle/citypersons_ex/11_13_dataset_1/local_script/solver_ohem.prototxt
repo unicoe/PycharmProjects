@@ -1,0 +1,17 @@
+train_net: "/home/user/Disk1.8T/unicoe/py-R-FCN1/experiments/11_13_dataset/model_ohem/multi_ohem.prototxt"
+base_lr: 0.002
+lr_policy: "multistep"
+stepvalue: 4000
+stepvalue: 5000
+gamma: 0.1
+display: 20
+
+momentum: 0.9
+weight_decay: 0.0005
+# We disable standard caffe solver snapshotting and implement our own snapshot
+# function
+snapshot: 0
+# We still use the snapshot prefix, though
+snapshot_prefix: "fpn_rfcn_ohem"
+iter_size: 8
+# debug_info: true

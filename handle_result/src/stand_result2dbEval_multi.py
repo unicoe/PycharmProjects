@@ -41,12 +41,16 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_4ff291a1-ebd7-4003-9125-1d7e88ccf932_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_9ca11107-ce28-4307-a24d-5b8302ec84e8_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_703c00b0-cea8-4f0d-8a6a-a740aa3e8b99_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_98936ab4-223e-493d-a5f4-e284cf1098cf_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_c61ece65-dc68-4d48-b989-eebf381d00e9_det_test_person.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_d1f13d52-30ef-4e18-9840-9699c925eb73_det_test_person.txt',
+
+
+'/home/user/PycharmProjects/handle_result/det_result/peel/66psroi/2018_11_14_Wed_10_43_52_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/det_result/peel/66psroi/2018_11_14_Wed_11_01_54_det_test_person.txt',
+'/home/user/PycharmProjects/handle_result/det_result/peel/66psroi/2018_11_14_Wed_11_19_55_det_test_person.txt',
+# '/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_9ca11107-ce28-4307-a24d-5b8302ec84e8_det_test_person.txt',
+# '/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_703c00b0-cea8-4f0d-8a6a-a740aa3e8b99_det_test_person.txt',
+# '/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_98936ab4-223e-493d-a5f4-e284cf1098cf_det_test_person.txt',
+# '/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_c61ece65-dc68-4d48-b989-eebf381d00e9_det_test_person.txt',
+# '/home/user/PycharmProjects/handle_result/det_result/11_7/comp4_d1f13d52-30ef-4e18-9840-9699c925eb73_det_test_person.txt',
 
 ]
 
