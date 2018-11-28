@@ -16,7 +16,7 @@ I0615 02:07:01.529983 15760 solver.cpp:244]     Train net output #4: rpn_loss_bb
 
 import re
 
-file_path = "/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rfcn_end2end_ResNet-50_.txt.2018-11-05_21-30-18"
+file_path = "/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rfcn_end2end_ResNet-50_.txt.2018-11-22_23-18-59"
 
 rf = open(file_path)
 
@@ -89,13 +89,13 @@ def mkdir(path):
         print path + 'failed!'
         return False
 
-mkdir("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/")
-al_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_all_loss_p2.txt", "w")
-ac_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_accuarcy_p2.txt", "w")
-bl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_bbox_p2.txt", "w")
-cl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_cls_p2.txt", "w")
-rcl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_cls_loss_p2.txt", "w")
-rbl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_loss_bbox_p2.txt", "w")
+mkdir("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/")
+al_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_all_loss_p2.txt", "w")
+ac_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_accuarcy_p2.txt", "w")
+bl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_bbox_p2.txt", "w")
+cl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_cls_p2.txt", "w")
+rcl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_cls_loss_p2.txt", "w")
+rbl_wf_p2 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_loss_bbox_p2.txt", "w")
 
 
 
@@ -202,13 +202,13 @@ def mkdir(path):
         print path + 'failed!'
         return False
 
-mkdir("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/")
-al_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_all_loss_p3.txt", "w")
-ac_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_accuarcy_p3.txt", "w")
-bl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_bbox_p3.txt", "w")
-cl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_cls_p3.txt", "w")
-rcl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_cls_loss_p3.txt", "w")
-rbl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_loss_bbox_p3.txt", "w")
+mkdir("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/")
+al_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_all_loss_p3.txt", "w")
+ac_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_accuarcy_p3.txt", "w")
+bl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_bbox_p3.txt", "w")
+cl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_cls_p3.txt", "w")
+rcl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_cls_loss_p3.txt", "w")
+rbl_wf_p3 = open("/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_loss_bbox_p3.txt", "w")
 
 
 

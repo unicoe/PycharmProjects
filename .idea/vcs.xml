@@ -4,6 +4,8 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/500/DeepLearning-500-questions" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PyTorch-book" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/some_learn/CityPersons-Dataset/evaluation/cocoapi" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/some_learn/CityPersons_handle/evaluation/cocoapi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/some_learn/Data_Set_handle/CityPersons-Dataset/evaluation/cocoapi" vcs="Git" />
   </component>
 </project>

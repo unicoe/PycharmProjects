@@ -32,12 +32,12 @@ def loadData(file):
     return dataMat
 
 #loda data
-train_all_loss_p2 = loadData_all_loss('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_all_loss_p2.txt')
-train_accuracy_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_accuarcy_p2.txt')
-train_loss_bbox_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_bbox_p2.txt')
-train_loss_cls_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_cls_p2.txt')
-train_rpn_cls_loss_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_cls_loss_p2.txt')
-train_rpn_loss_bbox_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_loss_bbox_p2.txt')
+train_all_loss_p2 = loadData_all_loss('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_all_loss_p2.txt')
+train_accuracy_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_accuarcy_p2.txt')
+train_loss_bbox_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_bbox_p2.txt')
+train_loss_cls_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_cls_p2.txt')
+train_rpn_cls_loss_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_cls_loss_p2.txt')
+train_rpn_loss_bbox_p2 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_loss_bbox_p2.txt')
 
 # panads Series
 draw_train_all_loss_p2 = pd.Series(train_all_loss_p2, index = range(0,len(train_all_loss_p2),1))
@@ -100,7 +100,7 @@ plt.title(u"rpn_loss_bbox")
 plt.xlabel(u"iter")
 plt.ylabel(u"rpn_loss_bbox")
 
-plt.savefig("/home/user/PycharmProjects/some_learn/draw_loss_curve/img/11_61_p2.png")
+plt.savefig("/home/user/PycharmProjects/some_learn/draw_loss_curve/img/11_23_1_p2.png")
 #save format maybe : format="eps"  or "pdf"
 
 
@@ -114,12 +114,12 @@ plt.show()
 """
 
 
-train_all_loss_p3 = loadData_all_loss('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_all_loss_p3.txt')
-train_accuracy_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_accuarcy_p3.txt')
-train_loss_bbox_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_bbox_p3.txt')
-train_loss_cls_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_loss_cls_p3.txt')
-train_rpn_cls_loss_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_cls_loss_p3.txt')
-train_rpn_loss_bbox_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_6/train_rpn_loss_bbox_p3.txt')
+train_all_loss_p3 = loadData_all_loss('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_all_loss_p3.txt')
+train_accuracy_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_accuarcy_p3.txt')
+train_loss_bbox_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_bbox_p3.txt')
+train_loss_cls_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_loss_cls_p3.txt')
+train_rpn_cls_loss_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_cls_loss_p3.txt')
+train_rpn_loss_bbox_p3 = loadData('/home/user/PycharmProjects/some_learn/draw_loss_curve/logs/11_23/train_rpn_loss_bbox_p3.txt')
 
 # panads Series
 draw_train_all_loss_p3 = pd.Series(train_all_loss_p3, index = range(0,len(train_all_loss_p3),1))
@@ -183,7 +183,8 @@ plt.title(u"rpn_loss_bbox")
 plt.xlabel(u"iter")
 plt.ylabel(u"rpn_loss_bbox")
 
-plt.savefig("/home/user/PycharmProjects/some_learn/draw_loss_curve/img/11_61_p3.png")
+plt.savefig("/home/user/PycharmProjects/some_learn/draw_loss_curve/img/11_23_1_p3.png")
+
 #save format maybe : format="eps"  or "pdf"
 
 

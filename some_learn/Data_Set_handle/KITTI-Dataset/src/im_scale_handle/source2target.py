@@ -9,8 +9,7 @@ import numpy as np
 
 # save img_shape to dict
 def get_shape_dict():
-    test_shape = open("/home/user/PycharmProjects/some_learn/Data_Set_handle"
-              "/INRIA-Dataset/lst/test_img_shape.txt", "r")
+    test_shape = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/im_scale_handle/im_shape/img_shape.txt", "r")
 
     shape_dict = {}
     content = test_shape.readline()
@@ -58,8 +57,7 @@ def get_source_dict(source_path):
 
 
 def get_im_name_lst():
-    r_test_shape = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/"
-              "INRIA-Dataset/lst/test_img_shape.txt", "r")
+    r_test_shape = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/im_scale_handle/im_shape/img_shape.txt", "r")
 
     content = r_test_shape.readline()
     im_name_lst = []
@@ -78,26 +76,26 @@ def handle_det(im_name_lst, det_dict, shape_dict):
             im_w = cur_shape[1]
             im_h = cur_shape[0]
 
-            min_size = min(im_w, im_h)
-            max_size = max(im_w, im_h)
+            # min_size = min(im_w, im_h)
+            # max_size = max(im_w, im_h)
+            #
+            # """
+            # # Each scale is the pixel size of an image's shortest side
+            # __C.TEST.SCALES = (960,)
+            #
+            # # Max pixel size of the longest side of a scaled input image
+            # __C.TEST.MAX_SIZE = 1280
+            # """
+            # im_scale = float(640) / float(min_size)
+            # # Prevent the biggest axis from being more than MAX_SIZE
+            # if np.round(im_scale * max_size) > 2112:
+            #     im_scale = float(2112) / float(max_size)
+            #
+            # sw = im_w * im_scale
+            # sh = im_h * im_scale
 
-            """
-            # Each scale is the pixel size of an image's shortest side
-            __C.TEST.SCALES = (960,)
-    
-            # Max pixel size of the longest side of a scaled input image
-            __C.TEST.MAX_SIZE = 1280
-            """
-            im_scale = float(960) / float(min_size)
-            # Prevent the biggest axis from being more than MAX_SIZE
-            if np.round(im_scale * max_size) > 1280:
-                im_scale = float(1280) / float(max_size)
-
-            sw = im_w * im_scale
-            sh = im_h * im_scale
-
-            r1 = 1280.0 / sw
-            r2 = 960.0 / sh
+            r1 = 2112.0 / im_w
+            r2 = 640.0 / im_h
 
             for bbox_item in det_dict[im_idx]:
                 x1 = bbox_item[1]
@@ -105,36 +103,12 @@ def handle_det(im_name_lst, det_dict, shape_dict):
                 x2 = bbox_item[3]
                 y2 = bbox_item[4]
 
-                tw = bbox_item[3] - bbox_item[1]
-                th = bbox_item[4] - bbox_item[2]
-                #
-                #
-                #
-                # b_w = min(tw, th)
-                # b_h = max(tw, th)
 
-                b_w = bbox_item[3] - bbox_item[1]
-                b_h = bbox_item[4] - bbox_item[2]
 
-                tmp_b_w = b_w/r1
-                tmp_b_h = b_h/r2
-
-                x_c = x1 + b_w/2.0
-                y_c = y1 + b_h/2.0
-                t_xc = x_c / r1
-                t_yc = y_c / r2
-
-                # t_x1 = t_xc - b_w/2.0
-                # t_y1 = t_yc - b_h/2.0
-                #
-                # t_x2 = t_xc + b_w / 2.0
-                # t_y2 = t_yc + b_h / 2.0
-
-                t_x1 = t_xc - tmp_b_w / 2.0
-                t_y1 = t_yc - tmp_b_h / 2.0
-
-                t_x2 = t_xc + tmp_b_w / 2.0
-                t_y2 = t_yc + tmp_b_h / 2.0
+                t_x1 = x1 / r1
+                t_y1 = y1 / r2
+                t_x2 = x2 / r1
+                t_y2 = y2 / r2
 
                 bbox_item[1] = t_x1
                 bbox_item[2] = t_y1
@@ -145,7 +119,7 @@ def handle_det(im_name_lst, det_dict, shape_dict):
 def save_target(im_name_lst, det_dict):
 
     save_name = "handle_" + target_idx.split("/")[-1]
-    target_file = "/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/" + save_name
+    target_file = "/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/im_scale_handle/" + save_name
 
     save_target = open(target_file, "w")
 
@@ -163,7 +137,7 @@ def save_target(im_name_lst, det_dict):
 
 target_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/1001-5.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/im_scale_handle/2018_11_25_Sun_08_08_07_det_test_person.txt',
 
 ]
 

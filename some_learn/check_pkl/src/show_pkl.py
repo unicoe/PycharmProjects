@@ -6,10 +6,10 @@
 # @Software: PyCharm Community Edition
 
 import cPickle as pickle
-f = open('/home/user/PycharmProjects/some_learn/check_pkl/res/voc_0712_trainval_gt_roidb_1.pkl')
+f = open('/home/user/PycharmProjects/some_learn/check_pkl/res/voc_0712_trainval_gt_roidb.pkl')
 info = pickle.load(f)
 
-wf = open("/home/user/PycharmProjects/some_learn/check_pkl/res/head_body_pkl_10_28.txt", "w")
+wf = open("/home/user/PycharmProjects/some_learn/check_pkl/res/pkl_11_16.txt", "w")
 print len(info) # 4250, train1x
 
 for idx in info:
