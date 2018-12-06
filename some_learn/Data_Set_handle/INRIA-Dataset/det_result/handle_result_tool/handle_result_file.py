@@ -5,7 +5,7 @@
 # @File    : handle_result_file.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/src/result.txt", "r")
+rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/handle_result_tool/result.txt", "r")
 
 content = rf.readline()
 

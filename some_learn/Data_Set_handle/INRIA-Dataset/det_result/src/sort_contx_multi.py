@@ -51,7 +51,9 @@ def generate_all_result(path):
 file_lst = [
 
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/PAMS-FCN.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/11_30_1/PA-MS FCN.txt',
+
+
 ]
 
 

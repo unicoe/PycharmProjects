@@ -127,14 +127,13 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_03_51_19_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_04_27_09_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_04_59_46_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_05_31_30_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_06_03_22_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_06_35_05_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_07_06_55_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/det_result/11_23/5_part_psroi_915_trainval/2018_11_23_Fri_07_38_40_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_04_42_03_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_05_15_45_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_05_50_01_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_06_23_34_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_06_57_10_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_07_30_53_det_test_person.txt',
+
 
 ]
 

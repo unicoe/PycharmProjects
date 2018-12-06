@@ -1,10 +1,24 @@
+def mkdir(path):
+    import os
+
+    path = path.strip()
+    path = path.rstrip("\\")
+
+    isExists = os.path.exists(path)
+    if not isExists:
+        os.makedirs(path)
+        print(path + 'ok')
+        return True
+    else:
+        print(path + 'failed!')
+        return False
+
 def handle_result_for_eval(file_path, save_path):
     """
     :param file_path: "/home/user/PycharmProjects/handle_result/10_12/comp4_10_12_7_27_det_test_person.txt"
     :param save_path: "/home/user/PycharmProjects/handle_result/10_12/comp4_10_12_7_27_det_test_person/"
     :return: 
     """
-    from unicoe_tool.mkdir import mkdir
 
     readfile = open(file_path)
     contx = readfile.readline()
@@ -41,7 +55,7 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/PAMS-FCN.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/11_30_1/PA-MS FCN.txt',
 
 ]
 

@@ -57,8 +57,8 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/handle_result/det_result/11_26/1.txt',
-'/home/user/PycharmProjects/handle_result/det_result/11_26/2.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_6/AVE-22k.txt',
+
 ]
 
 for pth_idx in path_lst:

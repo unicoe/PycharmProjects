@@ -65,6 +65,19 @@ def draw_bbox(file_idx, tmp_dict):
         tmp_path = cur_path + "/" + file
         dirList.append(tmp_path)
 
+    sp_im_read = open(
+        "/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/kitti_visual/sp_img_ls.txt", "r")
+
+    sp_im_name = sp_im_read.readline()
+
+    sp_im_l = []
+
+    while sp_im_name:
+        im_name = sp_im_name.strip("\n")
+        sp_im_l.append(im_name)
+        sp_im_name = sp_im_read.readline()
+
+
     #获取当前图片的绝对路径，然后进行处理
     for idx_im in dirList:
         all_str = idx_im
@@ -72,7 +85,8 @@ def draw_bbox(file_idx, tmp_dict):
         bot = inDict[-1][:-4]
         inDict_name = bot
 
-        if inDict_name in tmp_dict :
+
+        if inDict_name in tmp_dict and inDict_name in sp_im_l:
 
             bboxList = tmp_dict[inDict_name]
             im = cv2.imread(all_str)
@@ -96,8 +110,8 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/kitti/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/draw_result/kitti/sp_im/11/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/sp_im/11/' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png",
                             im)
             else:
@@ -129,8 +143,19 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/10/handle_2018_12_04_Tue_06_52_25_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_04_48_17_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_05_29_32_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_06_11_04_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_06_53_08_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_07_34_56_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_08_16_28_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_08_58_24_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_09_39_55_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_10_20_12_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_11_01_57_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_11_42_49_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_12_23_17_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/12_6/11/2018_12_05_Wed_13_04_36_det_test_person.txt',
 
 ]
 

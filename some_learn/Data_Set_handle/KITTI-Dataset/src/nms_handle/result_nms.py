@@ -10,7 +10,18 @@ import nms
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/im_scale_handle/2018_11_26_Mon_03_34_10_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_14_16_24_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_14_49_58_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_15_23_55_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_15_56_22_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_16_29_38_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_17_04_29_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_17_38_50_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_18_12_27_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_18_47_40_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_19_22_38_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_19_56_24_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_20_31_10_det_test_person.txt',
 
 ]
 
@@ -28,9 +39,14 @@ for file_idx in file_lst:
         # pic_name = res_list[0:17]
         # box_info = res_list[18:]
 
-        # kitti
-        pic_name = res_list[0:6]
-        box_info = res_list[7:]
+        #kitti
+
+        # pic_name = res_list[0:6]
+        # box_info = res_list[7:]
+
+        #kitti test_
+        pic_name = res_list[0:11]
+        box_info = res_list[12:]
 
         if pic_name in result_dir :
             result_dir[pic_name].append(box_info)
@@ -46,7 +62,16 @@ for file_idx in file_lst:
     nms_lst = [0.55]
 
     for nms_num in nms_lst:
-        w_path = r_path.strip("\n").split(".")[0] + "_nms_" + str(nms_num)[2:] + ".txt"
+        w_path = r_path.strip("\n").split(".")[0] + "_nms_" + str(nms_num)[2:] +  ".txt"
+
+
+        file_name = r_path.strip("\n").split(".")[0]
+        tmp_name = r_path.strip("\n").split(".")[0].split("/")
+        nms_name = "nms_" + str(nms_num)[2:] + "_" + tmp_name[-1]
+
+        w_path = file_name[0:104] + nms_name +  ".txt"
+
+
         wf = open(w_path, "w")
 
         for key in result_dir.iterkeys():

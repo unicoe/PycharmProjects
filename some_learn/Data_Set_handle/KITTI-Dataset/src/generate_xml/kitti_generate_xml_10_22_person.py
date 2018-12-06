@@ -131,7 +131,7 @@ def folder_struct(level, path):
     print fileList
     print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/anno/person_11_18.txt", "w")
+    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/anno/person_12_1.txt", "w")
     print len(fileList)
 
     train_lst = get_im_lst("train")
@@ -186,7 +186,7 @@ def folder_struct(level, path):
                             print ymax
 
                         float(tmpv[7])
-                        if h >= 16:
+                        if h >= 20:
                             cor_dict["xmin"] = xmin
                             cor_dict["ymin"] = ymin
                             cor_dict["xmax"] = xmax
@@ -200,7 +200,7 @@ def folder_struct(level, path):
                 #     flag = 1
 
             if len(obj)>0:
-                generate_xml("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/anno/person_11_18/", fileInfo, obj)
+                generate_xml("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/anno/person_12_1/", fileInfo, obj)
                 wf.write(fl.split('.')[0])
                 wf.write('\n')
                 cnt += 1
