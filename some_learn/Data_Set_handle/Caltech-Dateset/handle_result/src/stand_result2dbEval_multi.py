@@ -57,7 +57,7 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_6/AVE-22k.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_6/AVE-22k_nms_56-LAMR=4.54.txt',
 
 ]
 

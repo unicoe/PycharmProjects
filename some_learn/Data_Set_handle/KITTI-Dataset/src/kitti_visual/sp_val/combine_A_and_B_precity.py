@@ -9,14 +9,12 @@ def mkdir(path):
 
     path = path.strip()
     path = path.rstrip("\\")
-
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
         print path + ' create successful.'
         return True
     else:
-
         print path + ' path already exists.'
         return False
 
@@ -29,32 +27,22 @@ parser.add_argument('--fold_A',
 args = parser.parse_args()
 
 
-
-
 ls_a = [
 
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/2018_12_04_Tue_06_52_25_det_test_person/testing/',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/city_pre/2018_11_23_Fri_09_27_47_det_test_person/training/',
 
 ]
 
 ls_b = [
 
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_04_48_18_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_05_30_15_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_06_11_45_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_06_53_27_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_07_35_14_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_08_17_21_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_08_59_20_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_09_39_53_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_10_21_44_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_11_02_04_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_11_42_54_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_12_23_25_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_13_04_20_det_test_person/testing',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_00_19_50_det_test_person/training',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_00_40_02_det_test_person/training',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_01_00_18_det_test_person/training',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_01_20_15_det_test_person/training',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_01_40_13_det_test_person/training',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im_val/11x/2018_1nms_55_2018_12_03_Mon_02_00_18_det_test_person/training',
+
 ]
-
-
 
 for arg in vars(args):
     print('[%s] = ' % arg,  getattr(args, arg))
@@ -70,8 +58,8 @@ for sp in splits:
 
             num_imgs = min(1000000, len(img_list))
             print('split = %s, use %d/%d images' % (sp, num_imgs, len(img_list)))
-            img_fold_AB_tmp = img_fold_B.split('sp_im/')
-            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'sp_im', 'combime', img_fold_AB_tmp[1])
+            img_fold_AB_tmp = img_fold_B.split('sp_im_val/')
+            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'sp_im_val', 'combime_pre_city', img_fold_AB_tmp[1])
 
             #if not os.path.isdir(img_fold_AB):
             #    os.makedirs(img_fold_AB)

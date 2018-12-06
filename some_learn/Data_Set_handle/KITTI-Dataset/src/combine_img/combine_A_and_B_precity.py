@@ -33,7 +33,7 @@ args = parser.parse_args()
 
 ls_a = [
 
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/2018_12_04_Tue_06_52_25_det_test_person/testing/',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im/2018_12_05_Wed_05_15_45_det_test_person/testing/',
 
 ]
 
@@ -71,7 +71,7 @@ for sp in splits:
             num_imgs = min(1000000, len(img_list))
             print('split = %s, use %d/%d images' % (sp, num_imgs, len(img_list)))
             img_fold_AB_tmp = img_fold_B.split('sp_im/')
-            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'sp_im', 'combime', img_fold_AB_tmp[1])
+            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'sp_im', 'combime_pre_city', img_fold_AB_tmp[1])
 
             #if not os.path.isdir(img_fold_AB):
             #    os.makedirs(img_fold_AB)
