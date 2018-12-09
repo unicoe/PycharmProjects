@@ -130,13 +130,7 @@ def str2float_in_list(str_list):
 file_lst = [
 
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_07_40_41_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_07_58_05_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_08_15_44_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_08_33_10_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_08_50_48_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_09_08_27_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/city_pre_11_23val/2018_11_23_Fri_09_27_47_det_test_person.txt',
+'/home/user/Disk1.8T/unicoe/ssd.pytorch/eval/test_12_4.txt',
 
 ]
 
