@@ -111,7 +111,7 @@ def draw_bbox(tmp_dict):
     w_undet.write("img " + str(img_cnt))
     w_undet.close()
 
-    print "un_det " + str(len(undet_img))
+    # print "un_det " + str(len(undet_img))
     print "bbox: " + str(bbox_cnt)
     print "img " + str(img_cnt)
 
@@ -127,12 +127,10 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_04_42_03_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_05_15_45_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_05_50_01_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_06_23_34_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_06_57_10_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/12_6/city_pre/2018_12_05_Wed_07_30_53_det_test_person.txt',
+
+
+'/home/user/Disk1.8T/KITTI-experiments/12_8/2018_12_07_Fri_12_17_48_det_test_person.txt',
+
 
 
 ]

@@ -33,25 +33,15 @@ args = parser.parse_args()
 
 ls_a = [
 
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/2018_12_05_Wed_05_15_45_det_test_person/testing/',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im/12_7_121/2018_12_05_Wed_05_15_45_det_test_person/testing/',
 
 ]
 
 ls_b = [
 
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_04_48_18_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_05_30_15_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_06_11_45_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_06_53_27_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_07_35_14_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_08_17_21_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_08_59_20_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_09_39_53_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_10_21_44_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_11_02_04_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_11_42_54_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_12_23_25_det_test_person/testing',
-'/home/user/Disk1.8T/draw_result/kitti/sp_im/10/2018_12_05_Wed_13_04_20_det_test_person/testing',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im/12_9/11x/2018_12_07_Fri_23_36_43_det_test_person/testing',
+'/home/user/Disk1.8T/draw_result/kitti/sp_im/12_9/11x/2018_12_07_Fri_22_56_43_det_test_person/testing',
+
 ]
 
 

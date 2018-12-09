@@ -12,11 +12,11 @@ def mkdir(path):
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
-        print path + 'ok'
+        print path + 'ok.'
         return True
     else:
 
-        print path + 'failed!'
+        print path + ' path already exits.'
         return False
 
 def generate_result(resource_path):
@@ -129,8 +129,8 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/10/handle_2018_12_04_Tue_06_52_25_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_22_56_43_det_test_person.txt',
+'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_23_36_43_det_test_person.txt',
 
 ]
 

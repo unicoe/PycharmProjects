@@ -5,8 +5,8 @@
 # @File    : test_handle.py
 # @Software: PyCharm
 
-rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/10/2018_12_04_Tue_06_52_25_det_test_person.txt")
-wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/10/handle_2018_12_04_Tue_06_52_25_det_test_person.txt", "w")
+rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit_2/2018_12_07_Fri_22_56_43_det_test_person.txt")
+wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit_2/handle_2018_12_07_Fri_22_56_43_det_test_person.txt", "w")
 
 content = rf.readline()
 
