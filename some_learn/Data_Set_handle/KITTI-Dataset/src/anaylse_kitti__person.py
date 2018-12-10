@@ -14,10 +14,10 @@ def mkdir(path):
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
-        print path + 'ok'
+        print path + 'create done.'
         return True
     else:
-        print path + 'failed!'
+        print path + 'path already exists.'
         return False
 
 def generate_xml(file_root, file_info, obj):

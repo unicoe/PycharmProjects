@@ -6,6 +6,6 @@
 # @Software: PyCharm
 import math
 
-for i in range(15,160,5):
+for i in range(25,235,5):
 
     print str(i) + "  " + str(i/math.sqrt(0.41))

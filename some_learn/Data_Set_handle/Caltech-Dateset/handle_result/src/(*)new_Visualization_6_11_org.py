@@ -212,13 +212,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/11_12/comp4_7a784e86-ddd5-405a-89b1-d329a5c9eb89_det_test_person/test/'
+            save_path = '/home/user/Disk1.8T/draw_result/12_10/test/'
             mkdir(save_path)
             cv2.imwrite(save_path + str(dir_ + ".jpg"), im)
 
-gt_dict = generate_gt_dict("/home/user/PycharmProjects/anaylsis_result/draw_result_in_new_anno/gt_file/new_zss_6_9_test_gt.txt")
+gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/anaylsis_result/draw_result_in_new_anno/gt_file/new_zss_6_9_test_gt.txt")
 
 
-file_path = "/home/user/PycharmProjects/handle_result/det_result/11_12/comp4_85ae6c75-dda2-46c4-b15f-211b9e80b82d_det_test_person.txt"
+file_path = "/home/user/Disk1.8T/unicoe/pytorch-ssd/eval/test1.txt"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)

@@ -130,7 +130,7 @@ def str2float_in_list(str_list):
 file_lst = [
 
 
-'/home/user/Disk1.8T/unicoe/ssd.pytorch/eval/test_12_4.txt',
+'/home/user/Disk1.8T/unicoe/pytorch-ssd/eval/test1.txt',
 
 ]
 
