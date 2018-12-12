@@ -5,7 +5,7 @@
 # @File    : handle_result_file.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/handle_result/src/result.txt", "r")
+rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/src/result.txt", "r")
 
 content = rf.readline()
 

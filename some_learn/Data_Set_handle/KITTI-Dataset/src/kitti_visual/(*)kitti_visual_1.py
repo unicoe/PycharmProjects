@@ -86,7 +86,7 @@ def draw_bbox(file_idx, tmp_dict):
                 x2 = int(float(idx_bbox[3]))
                 y2 = int(float(idx_bbox[4]))
 
-                if float(idx_bbox[0]) >= 0.1:
+                if float(idx_bbox[0]) >= 0.5:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
                     cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
@@ -96,8 +96,8 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/kitti/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/draw_result/kitti/submit/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/submit/' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png",
                             im)
             else:
@@ -129,8 +129,8 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_22_56_43_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_23_36_43_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_04_Tue_06_52_25_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_22_56_43_det_test_person.txt',
 
 ]
 

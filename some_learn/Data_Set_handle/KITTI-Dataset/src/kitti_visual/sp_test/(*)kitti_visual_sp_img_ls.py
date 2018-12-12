@@ -110,8 +110,8 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/kitti/sp_im/12_9/11x/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/sp_im/12_9/11x/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/draw_result/kitti/sp_im/submit/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/sp_im/submit/' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png",
                             im)
             else:
@@ -144,8 +144,8 @@ def str2float_in_list(str_list):
 file_lst = [
 
 
-'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_22_56_43_det_test_person.txt',
-'/home/user/Disk1.8T/KITTI-experiments/exp/12_9/2018_12_07_Fri_23_36_43_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_04_Tue_06_52_25_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_22_56_43_det_test_person.txt',
 
 ]
 

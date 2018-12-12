@@ -56,8 +56,15 @@ def handle_result_for_eval(file_path, save_path):
         contx = readfile.readline()
 
 path_lst = [
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_6/AVE-22k_nms_56-LAMR=4.54.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_27_36.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_29_51.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_32_06.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_34_21.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_36_36.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_38_51.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_41_11.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_43_50.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_11_ssd/2018_12_11_Tue_05_46_59.txt',
 
 ]
 
