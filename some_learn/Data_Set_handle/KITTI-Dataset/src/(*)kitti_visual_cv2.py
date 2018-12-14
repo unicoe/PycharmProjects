@@ -83,7 +83,7 @@ def draw_bbox(tmp_dict):
                 x2 = int(float(idx_bbox[3]))
                 y2 = int(float(idx_bbox[4]))
 
-                if float(idx_bbox[0]) >= 0.5:
+                if float(idx_bbox[0]) >= 0.1:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
                     # cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
@@ -128,11 +128,7 @@ def str2float_in_list(str_list):
 file_lst = [
 
 
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_04_Tue_06_52_25_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_22_56_43_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/5_part_psroi_915_trainval_citypre/2018_11_23_Fri_03_51_19_det_test_person.txt',
-
+'/home/user/Disk1.8T/KITTI-experiments/12_8/2018_12_07_Fri_16_15_09_det_test_person.txt',
 
 
 ]

@@ -1,21 +1,13 @@
 from __future__ import print_function
-import torch
+import torch as t
+import torch.nn as nn
 
-x = torch.empty(5,3)
-print(x)
-
-x = torch.rand(5,3)
-print(x)
-
-x = torch.zeros(5,3)
-print(x)
-
-x = torch.tensor([5.5,3])
+x = t.Tensor([[1,2],[4,5]])
 
 print(x)
 
-x = x.new_ones(5,3,dtype=torch.double)
-print(x)
+y = nn.Conv2d(1,1,kernel_size=3,padding=1,stride=2)
 
-x = torch.randn_like(x, dtype=torch.float)
-print(x)
+out = y(x)
+
+print(out)

@@ -129,8 +129,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_04_Tue_06_52_25_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_22_56_43_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_16_15_09_det_test_person.txt',
 
 ]
 
