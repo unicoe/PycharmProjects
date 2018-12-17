@@ -37,8 +37,8 @@ def get_im_ls():
     return im_ls
 
 
-source_path = "/home/user/Disk1.8T/draw_result/kitti/2018_12_07_Fri_22_56_43_det_test_person/testing/image_2/"
-dest_path = "/home/user/Disk1.8T/draw_result/kitti/dif/2018_12_07_Fri_22_56_43_det_test_person/"
+source_path = "/home/user/Disk1.8T/draw_result/paper_result/cv/adapted_R-FCN/VOC0712/JPEGImages/"
+dest_path = "/home/user/Disk1.8T/draw_result/paper_result/cv/adapted_R-FCN/dif/"
 mkdir(dest_path)
 im_ls = get_im_ls()
 

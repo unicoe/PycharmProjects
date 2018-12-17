@@ -33,14 +33,14 @@ args = parser.parse_args()
 
 ls_a = [
 
-'/home/user/Disk1.8T/draw_result/paper_result/cv/adapted_R-FCN/VOC0712/',
+'/home/user/Disk1.8T/draw_result/paper_result/cv1/adapted_R-FCN/VOC0712/',
 
 
 ]
 
 ls_b = [
 
-'/home/user/Disk1.8T/draw_result/paper_result/cv/AVE-22k_nms_56-LAMR=4/VOC0712/',
+'/home/user/Disk1.8T/draw_result/paper_result/cv1/AVE-22k_nms_56-LAMR=4/VOC0712/',
 
 ]
 
@@ -62,8 +62,8 @@ for sp in splits:
 
             num_imgs = min(1000000, len(img_list))
             print('split = %s, use %d/%d images' % (sp, num_imgs, len(img_list)))
-            img_fold_AB_tmp = img_fold_B.split('sp_im/')
-            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'sp_im', 'combime', img_fold_AB_tmp[1])
+            img_fold_AB_tmp = img_fold_B.split('cv1/')
+            img_fold_AB = os.path.join(img_fold_AB_tmp[0],'cv1', 'combime', img_fold_AB_tmp[1])
 
             #if not os.path.isdir(img_fold_AB):
             #    os.makedirs(img_fold_AB)
@@ -83,7 +83,7 @@ for sp in splits:
                     im_A = cv2.imread(path_A)
                     im_B = cv2.imread(path_B)
 
-                    im_AB = np.vstack([im_A, im_B])
+                    im_AB = np.hstack([im_A, im_B])
 
                     show = False
                     if show:

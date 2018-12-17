@@ -9,16 +9,16 @@
 import os, sys
 
 # 打开文件
-path1 = "/home/user/Disk1.8T/draw_result/kitti/2018_12_07_Fri_23_36_43_det_test_person/testing/image_2"
+path1 = "/home/user/Disk1.8T/draw_result/paper_result/cv1/adapted_R-FCN/VOC0712/JPEGImages/"
 res1 = os.listdir( path1 )
 
 # 输出所有文件和文件夹
 
-path2 = "/home/user/Disk1.8T/draw_result/kitti/2018_12_07_Fri_22_56_43_det_test_person/testing/image_2"
+path2 = "/home/user/Disk1.8T/draw_result/paper_result/cv/AVE-22k_nms_56-LAMR=4/VOC0712/JPEGImages/"
 res2 = os.listdir( path2 )
 
 
 
-for i2 in res2:
-   if i2 not in res1:
+for i2 in res1:
+   if i2 not in res2:
       print i2

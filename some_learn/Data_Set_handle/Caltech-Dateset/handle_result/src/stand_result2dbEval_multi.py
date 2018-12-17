@@ -56,18 +56,8 @@ def handle_result_for_eval(file_path, save_path):
         contx = readfile.readline()
 
 path_lst = [
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_38_02.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_41_00.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_44_05.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_47_04.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_50_03.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_53_04.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_56_04.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_10_59_00.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_11_02_03.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_11_04_59.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_11_08_07.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_13_ssd512resnet/2018_12_13_Thu_11_11_13.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/AVE-22k_nms_56-LAMR=4.54.txt',
 
 ]
 

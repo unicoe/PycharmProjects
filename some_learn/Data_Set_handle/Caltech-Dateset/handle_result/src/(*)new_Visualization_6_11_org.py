@@ -196,7 +196,7 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                                 tmp_list.append(idx_res)
 
             for idx_tmp in tmp_list:
-                if float(idx_tmp[0]) < 0.1:
+                if float(idx_tmp[0]) < 0:
                     continue
                 res_x1 = int(float(idx_tmp[1]))
                 res_y1 = int(float(idx_tmp[2]))
@@ -212,13 +212,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/12_14/test/'
+            save_path = '/home/user/Disk1.8T/draw_result/12_17/test/'
             mkdir(save_path)
             cv2.imwrite(save_path + str(dir_ + ".jpg"), im)
 
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/anaylsis_result/draw_result_in_new_anno/gt_file/new_zss_6_9_test_gt.txt")
 
 
-file_path = "/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_14_ssd/2018_12_14_Fri_12_03_27.txt"
+file_path = '/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_17/2018_12_17_Mon_18_19_19.txt'
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)
