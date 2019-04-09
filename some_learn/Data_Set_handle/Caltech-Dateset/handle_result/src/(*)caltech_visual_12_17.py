@@ -1,7 +1,7 @@
 #--coding:utf-8--
 import os
 import cv2
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def mkdir(path):
     import os
@@ -96,8 +96,8 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/cv1/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/cv1/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                cv2.imwrite('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                             im)
             else:
@@ -129,8 +129,10 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/AVE-22k_nms_56-LAMR=4.54.txt',
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/1_170_seg_merge_base512/res/2019_01_18_Fri_00_54_51.txt',
+
+
+
 ]
 
 for file_idx in file_lst:

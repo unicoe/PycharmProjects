@@ -29,11 +29,13 @@ nimages = length(test_id);
 % else
 %   car_dets = zeros(0,6);
 % end
-ped_dets_path = '/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle_2018_12_07_Fri_16_15_09_det_test_person.txt';
+ped_dets_path = '/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle-result-kitti-trainval-159Couple-111E.txt';
 % 1 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/10/handle_2018_12_04_Tue_06_52_25_det_test_person.txt
 % 2 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit_2/handle_2018_12_07_Fri_22_56_43_det_test_person.txt
 % 3 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle_2018_12_07_Fri_16_15_09_det_test_person.txt
-
+% 4 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle-result-kitti-trainval-159Couple-9E.txt
+% 5 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle-result-kitti-trainval-rfcn159Couple-15E.txt
+% 6 sub /home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/handle-result-kitti-trainval-159Couple-111E.txt
 if (exist(ped_dets_path))
   ped_dets = load(ped_dets_path);
 else

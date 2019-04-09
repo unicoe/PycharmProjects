@@ -5,7 +5,7 @@
 # @File    : handle_result_file.py
 # @Software: PyCharm Community Edition
 
-rf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/eval_script/det_result.txt", "r")
+rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/evaluation/eval_script/det_result.txt", "r")
 
 content = rf.readline()
 

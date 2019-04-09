@@ -56,8 +56,9 @@ def handle_result_for_eval(file_path, save_path):
         contx = readfile.readline()
 
 path_lst = [
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/AVE-22k_nms_56-LAMR=4.54.txt',
+
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/drwa_pic/Adapted R-FCN(Ours).txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/drwa_pic/PAMS-FCN(Ours).txt',
 
 ]
 

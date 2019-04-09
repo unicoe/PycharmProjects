@@ -530,11 +530,13 @@ bool eval_class (FILE *fp_det, FILE *fp_ori, CLASSES current_class,const vector<
   for (int32_t i=0; i<N_VALIMAGES; i++){
 
     // for all scores/recall thresholds do:
+    cout << "thresholds.size() " << thresholds.size() << endl;
+
     for(int32_t t=0; t<thresholds.size(); t++){
       tPrData tmp = tPrData();
       tmp = computeStatistics(current_class, groundtruth[i], detections[i], dontcare[i],
                               ignored_gt[i], ignored_det[i], true, compute_aos, thresholds[t], t==38);
-
+      //cout << "thresholds[t] " << thresholds[t] << endl;
       // add no. of TP, FP, FN, AOS for current frame to total evaluation for current threshold
       pr[t].tp += tmp.tp;
       pr[t].fp += tmp.fp;
@@ -715,6 +717,7 @@ bool eval(string gt_dir, string result_dir, string data_list_path){
 
   // eval pedestrians
   if(eval_pedestrian){
+      cout << "eval ****" <<endl;
     fp_det = fopen((result_dir + "/stats_" + CLASS_NAMES[PEDESTRIAN] + "_detection.txt").c_str(),"w");
     if(compute_aos)
       fp_ori = fopen((result_dir + "/stats_" + CLASS_NAMES[PEDESTRIAN] + "_orientation.txt").c_str(),"w");

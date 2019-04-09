@@ -27,7 +27,7 @@ def mkdir(path):
 
 def get_im_ls():
 
-    im_ls_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/caltech1x_ls.txt","r")
+    im_ls_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/person_1_5_vis0.3_h20_w10.txt","r")
     im_ls = []
     im_name = im_ls_r.readline()
 
@@ -39,7 +39,7 @@ def get_im_ls():
 
 
 def get_gt_info():
-    gt_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/gt_info.txt", "r")
+    gt_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/gt_info_20_10_0.3_zss.txt", "r")
     gt_dict = {}
     gt_info = gt_r.readline()
 
@@ -89,5 +89,5 @@ for i_im in im_ls:
             # plt.imshow(img)
             # plt.show()
         # cv2.imwrite("/home/user/Disk1.8T/data_set/seglabel_png1/" + i_im + ".png", img)
-        mkdir("/home/user/Disk1.8T/data_set/seglabel_png_12_9/")
-        img.save("/home/user/Disk1.8T/data_set/seglabel_png_12_9/" + i_im + ".png", 'png')
+        mkdir("/home/user/Disk1.8T/data_set/seglabel_png_1_5/")
+        img.save("/home/user/Disk1.8T/data_set/seglabel_png_1_5/" + i_im + ".png", 'png')

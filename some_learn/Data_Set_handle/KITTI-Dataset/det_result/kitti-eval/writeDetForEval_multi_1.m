@@ -17,7 +17,7 @@ end
 gt_dir = [root_dir '/training/label_2'];
 
 % get the list for evaluation original code for val/test
-list_dir = ['/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/k_fold_cv/train_val_lst/val0.txt'];
+list_dir = ['/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/k_fold_cv/train_val_lst/val_for_train.txt'];
 %list_dir = ['/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/mscnn/ImageSets/val.txt'];
 test_id = load(list_dir);
 nimages = length(test_id);
@@ -34,12 +34,7 @@ fileID = fopen('result_1.txt','w');
 
 str = {
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_22_27_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_29_43_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_36_53_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_43_59_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_51_02_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/nms_handle/det_result/result/1/2018_12_03_Mon_08_57_57_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/result-15E-159Couple-005.txt',
 
 }
 
@@ -48,7 +43,7 @@ det_paths = cell2struct(str',{'path'});
 for i=1:100
     ped_path = det_paths(i).path;
     
-    file_name = ped_path(105:142)
+    file_name = ped_path(82:100)
     
     ped_dets_path = ped_path;
 
@@ -114,7 +109,7 @@ for i=1:100
     if (is_gt_available)
       plot_dir = [result_dir 'plot/'];
       % input arguments [gt_dir, result_dir, list_dir];
-      command_line = sprintf('eval/evaluate_object %s %s %s', gt_dir,result_dir,list_dir);
+      command_line = sprintf('/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/kitti-eval/eval/evaluate_object %s %s %s', gt_dir,result_dir,list_dir);
       system(command_line);
       plot_set = dir([plot_dir '*.txt']);
       for i = 1:length(plot_set)

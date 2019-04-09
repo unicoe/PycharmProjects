@@ -176,24 +176,24 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                         res_l.append(res_x2)
                         res_l.append(res_y2)
 
-                        iou_res = round(compute_IoU(gt_l, res_l), 2)
-
-                        if iou_res > 0.5:
-                            cv2.rectangle(im, (res_x1, res_y1), (res_x2, res_y2), (255, 255, 0), 1)
-
-                            cv2.putText(im, str(str(iou_res) + " " + str(idx_res[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
-                                        (255, 255, 0))
-
-                            if idx_res in tmp_list:
-                                tmp_list.remove(idx_res)
-                            resList.remove(idx_res)
-                        else:
-                            if idx_res in tmp_list:
-                                if iou_res > idx_res[5]:
-                                    idx_res[5] = iou_res
-                            else:
-                                idx_res.append(iou_res)
-                                tmp_list.append(idx_res)
+                        # iou_res = round(compute_IoU(gt_l, res_l), 2)
+                        #
+                        # if iou_res > 0.5:
+                        #     cv2.rectangle(im, (res_x1, res_y1), (res_x2, res_y2), (255, 255, 0), 1)
+                        #
+                        #     cv2.putText(im, str(str(iou_res) + " " + str(idx_res[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
+                        #                 (255, 255, 0))
+                        #
+                        #     if idx_res in tmp_list:
+                        #         tmp_list.remove(idx_res)
+                        #     resList.remove(idx_res)
+                        # else:
+                        #     if idx_res in tmp_list:
+                        #         if iou_res > idx_res[5]:
+                        #             idx_res[5] = iou_res
+                        #     else:
+                        #         idx_res.append(iou_res)
+                        #         tmp_list.append(idx_res)
 
             for idx_tmp in tmp_list:
                 if float(idx_tmp[0]) < 0.1:
@@ -212,13 +212,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                             (0, 0, 255))
                 tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/11_5/handle_couple-4k/test/'+dir_.split("/")[0]+ "/"
+            save_path = '/home/user/Disk1.8T/draw_result/2019_03_13_Wed_09_21_56/test/'+dir_.split("/")[0]+ "/"
             mkdir(save_path)
             cv2.imwrite(save_path + str(dir_.split("/")[1]+ ".png"), im)
 
-gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/info_txt.txt")
+gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/info_txt.txt")
 
 
-file_path = "/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/handle_couple-4k.txt"
+file_path = "/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/evaluation/result/2019_03_13_Wed_09_21_56.txt"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)

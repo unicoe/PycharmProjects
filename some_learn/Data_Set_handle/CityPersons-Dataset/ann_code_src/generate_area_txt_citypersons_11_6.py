@@ -13,10 +13,13 @@ for k,v in ctx_dict.items():
     fileInfo.append(folderName)
     fileInfo.append(fileName)
 
-    area_file = "/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/analyse_citypersons_data/citypersons_11_6.txt"
+    area_file = "/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/analyse_citypersons_data/h_list.txt"
     wf = open(area_file, "a+")
 
     if v:
+
+        print(v)
+        print("v info:")
         for v_i in v:
             tmpv = v_i.split(" ")
             print tmpv
@@ -36,7 +39,7 @@ for k,v in ctx_dict.items():
             ratio = v_size / (orginal_size+0.0)
 
 
-            if int(ymax) - int(ymin) >= 20 and ratio >= 0.35:
+            if int(ymax) - int(ymin) >= 20 and ratio >= 0.3:
                 cor_dict = {}
                 cor_dict["xmin"] = xmin
                 cor_dict["ymin"] = ymin
@@ -46,7 +49,7 @@ for k,v in ctx_dict.items():
                 w = int(xmax)-int(xmin)
                 h = int(ymax)-int(ymin)
 
-                wf.write(str(w*h))
+                wf.write(str(h))
                 wf.write('\n')
 
                 rate = 0

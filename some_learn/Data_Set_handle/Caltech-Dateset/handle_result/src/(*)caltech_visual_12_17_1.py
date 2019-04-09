@@ -53,6 +53,14 @@ def draw_bbox(file_idx, tmp_dict):
     img_cnt = 0
     undet_img = []
 
+    tgt_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/res_ls/res_ls.txt", "r")
+    tg_ls = []
+    tg_info = tgt_r.readline()
+    while tg_info:
+        tg_tmp = tg_info.strip("\n")
+        tg_ls.append(tg_tmp)
+        tg_info = tgt_r.readline()
+
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
 
@@ -73,7 +81,7 @@ def draw_bbox(file_idx, tmp_dict):
         bot = inDict[-1][:-4]
         inDict_name = bot
 
-        if inDict_name in tmp_dict :
+        if inDict_name in tmp_dict:
 
             bboxList = tmp_dict[inDict_name]
             im = cv2.imread(all_str)
@@ -103,22 +111,22 @@ def draw_bbox(file_idx, tmp_dict):
                     rect = plt.Rectangle((x1, y1),
                                          x2 - x1,
                                          y2 - y1, fill=False,
-                                         edgecolor=color, linewidth=1.15)
+                                         edgecolor=color, linewidth=1.25)
                     plt.gca().add_patch(rect)
 
-                    plt.gca().text(x1, y1,
+                    plt.gca().text(x1, y1-8,
                                    '{:.3f}'.format(float(idx_bbox[0])),
-                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=7, color='black')
+                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=9, color='white')
             #plt.show()
 
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
                 # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
                 #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                 #             im)
-                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
+                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' +
                              str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png")
             else:
                 undet_img.append(bot)
@@ -149,8 +157,8 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/AVE-22k_nms_56-LAMR=4.54.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_7/3_60/2019_03_07_Thu_18_41_07.txt'
+
 ]
 
 for file_idx in file_lst:

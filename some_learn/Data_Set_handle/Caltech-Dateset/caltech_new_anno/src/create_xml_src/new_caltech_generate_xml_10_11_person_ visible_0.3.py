@@ -108,7 +108,7 @@ def folder_struct(level, path):
     # print fileList
     # print dirList
     cnt = 0
-    wf = open("/home/user/PycharmProjects/caltech_new_anno/txt_folder/person_10_29_vis0.3_h40_w3.txt", "w")
+    wf = open("/home/user/PycharmProjects/caltech_new_anno/person_1_5_vis0.3_h20_w10.txt", "w")
     print len(fileList)
     for fl in fileList:
         #todo 遍历txt文件，然后根据txt文件生成xml文件
@@ -159,7 +159,7 @@ def folder_struct(level, path):
                     if tmpv[5] == '0' or rate >= 0.3:
                         w = int(xmax)-int(xmin) #w
                         h = int(ymax)-int(ymin) #h
-                        if w >= 10 and h >= 40:
+                        if w >= 10 and h >= 20:
                             cor_dict = {}
                             # 生成全身bbox
                             cor_dict["xmin"] = xmin
@@ -183,9 +183,10 @@ def folder_struct(level, path):
             # wf.write('\n')
             pass
         #test
-        generate_xml("/home/user/PycharmProjects/caltech_new_anno/person_10_29_vis0.3_h40_w3/", fileInfo, obj)
-        wf.write(fl.split('.')[0])
-        wf.write('\n')
+        if len(obj) != 0:
+            generate_xml("/home/user/PycharmProjects/caltech_new_anno/person_1_5_vis0.3_h20_w10/", fileInfo, obj)
+            wf.write(fl.split('.')[0])
+            wf.write('\n')
     print cnt
     #wf.write(cnt)
     pass

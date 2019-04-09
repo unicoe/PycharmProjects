@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from unicoe_tool.generate_xml import generate_xml
-
 def mkdir(path):
     import os
 
@@ -16,10 +14,78 @@ def mkdir(path):
         print path + 'failed!'
         return False
 
+def generate_xml(file_root, file_info, obj):
+    from lxml.etree import Element, SubElement, tostring
+    import pprint
+    from xml.dom.minidom import parseString
+    import os
+    try:
+        node_root = Element('annotation')
+        node_folder = SubElement(node_root, 'folder')
+        node_folder.text = file_info[0]
+    except:
+        print "error"
+    node_filename = SubElement(node_root, 'filename')
+    node_filename.text = file_info[1]
+
+    node_size = SubElement(node_root, 'size')
+    node_width = SubElement(node_size, 'width')
+    node_width.text = '2048'
+
+    node_height = SubElement(node_size, 'height')
+    node_height.text = '1024'
+
+    node_depth = SubElement(node_size, 'depth')
+    node_depth.text = '3'
+
+    for obj_i in obj:
+        print obj_i
+        node_object = SubElement(node_root, 'object')
+        node_name = SubElement(node_object, 'name')
+        #node_name.text = 'mouse'
+        node_name.text = 'person'
+
+        node_name = SubElement(node_object, 'difficult')
+        # node_name.text = 'mouse'
+        node_name.text = '0'
+
+        node_bndbox = SubElement(node_object, 'bndbox')
+        node_xmin = SubElement(node_bndbox, 'xmin')
+        #node_xmin.text = '99'
+        node_xmin.text = obj_i['xmin']
+
+        node_ymin = SubElement(node_bndbox, 'ymin')
+        #node_ymin.text = '358'
+        node_ymin.text = obj_i['ymin']
+
+        node_xmax = SubElement(node_bndbox, 'xmax')
+        #node_xmax.text = '135'
+        node_xmax.text = obj_i['xmax']
+
+        node_ymax = SubElement(node_bndbox, 'ymax')
+        #node_ymax.text = '375'
+        node_ymax.text = obj_i['ymax']
+
+    xml = tostring(node_root, pretty_print=True)  #格式化显示，该换行的换行
+    dom = parseString(xml)
+    #file_root = '/home/user/Downloads/caltech_data_set/data_train/'
+    # file_root = '/home/user/Downloads/caltech_data_set/30stepsize1_train/'
+    file_name = file_root + file_info[0];
+    mkdir(file_name)
+    fw = open(file_name+"/"+file_info[1].split('.')[0]+".xml", 'w')
+
+    fw.write(xml)
+    print "xml _ ok"
+    fw.close()
+
+    #for debug
+    #print xml
+
+
 def extrat_info():
-    rf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/ann_train_aligned.txt", "r")
-    wf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/trainval_lst" \
-              "/train_11_13_40_0.6.txt", "w")
+    rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/ann_file/ann_train_aligned.txt", "r")
+    # wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/ann_file/trainval_lst" \
+    #           "/train_3_11_40_0.6.txt", "w")
     contx = rf.readline()
     ctx_str = ""
 
@@ -45,23 +111,29 @@ def extrat_info():
         elif contx[0] == "\n":
             if len(ctx_dict[tmp]) > 0:  #  对没有标注的图片进行筛选
             #if len(ctx_dict[tmp])>=0:    #  不进行筛选
-
-                wf.write(tmp.split('.')[0])
-                wf.write("\n")
+                pass
+                # wf.write(tmp.split('.')[0])
+                # wf.write("\n")
         contx = rf.readline()
 
     rf.close()
-    wf.close()
+    # wf.close()
     return ctx_dict
 
 ctx_dict = extrat_info()
 
+wf = open(
+    "/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/ann_file/trainval_lst" \
+    "/train_3_11_40_0.6.txt", "w")
+
 for k,v in ctx_dict.items():
     folderName,fileName = k.split("/")
 
+
+
     # 保存标注的文件
-    mkdir("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/anno_11_13_40_0.6/")
-    root_file = "/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/anno_11_13_40_0.6/"
+    mkdir("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/anno_3_11_40_0.6/")
+    root_file = "/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/anno_3_11_40_0.6/"
 
     fileInfo=[]
     obj = []
@@ -72,7 +144,7 @@ for k,v in ctx_dict.items():
 
     img_root = "/home/user/Disk1.8T/py-R-FCN/data/VOCdevkit0712(citypersons)/VOC0712/JPEGImages"
     im_path = img_root + "/" + folderName + "/" + fileName.split("\n")[0]
-
+    print(fileName.split("\n")[0])
     if v:
         for v_i in v:
             tmpv = v_i.split(" ")
@@ -100,4 +172,8 @@ for k,v in ctx_dict.items():
                 cor_dict["ymax"] = ymax
                 obj.append(cor_dict)
 
-        generate_xml(root_file, fileInfo, obj)
+        if len(obj) > 0:
+            generate_xml(root_file, fileInfo, obj)
+            wf.write(folderName + "/" + fileName.split("\n")[0].split(".")[0])
+            wf.write("\n")
+wf.close()

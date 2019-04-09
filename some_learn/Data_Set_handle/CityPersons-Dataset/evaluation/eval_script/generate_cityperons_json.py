@@ -16,8 +16,47 @@ import eval_demo
 file_list = [
 #'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/11_13/0/comp4_a7e8f78e-5da1-4f8b-9349-12bbf3b57148_det_test_person.txt',
 
-'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/result/couple-1k.txt',
-'/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/result/couple-4k.txt',
+#'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_31_56_val_det.txt.re',
+'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_33_45_val_det.txt.re',
+'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_35_35_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_37_25_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_39_15_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_41_07_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_43_00_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_44_53_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_46_45_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_48_38_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_50_31_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_52_24_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_54_18_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_56_11_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_58_05_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_59_58_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_01_52_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_03_45_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_05_40_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_07_34_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_09_28_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_11_23_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_13_18_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_15_14_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_17_09_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_19_05_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_21_00_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_22_56_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_24_51_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_26_48_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_28_44_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_30_40_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_32_37_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_34_34_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_36_31_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_38_28_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_40_25_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_42_23_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_44_20_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_46_18_val_det.txt.re',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_48_16_val_det.txt.re',
 
 ]
 
@@ -96,7 +135,7 @@ def generate_json(file_name):
 
     jsObj = json.dumps(dt_coco)
 
-    fileObject = open('/home/user/PycharmProjects/some_learn/CityPersons_handle/evaluation/val_dt.json', 'w')
+    fileObject = open('/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/evaluation/val_dt.json', 'w')
     fileObject.write(jsObj)
     fileObject.close()
 

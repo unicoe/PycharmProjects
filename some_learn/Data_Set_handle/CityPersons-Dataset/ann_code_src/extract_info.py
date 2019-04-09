@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 def extrat_info():
-    rf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/ann_train_aligned.txt", "r")
-    wf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_code_src/ann_file/trainval_lst" \
-              "/train_11_13_20_0.35.txt", "w")
+    rf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/"
+              "ann_code_src/ann_file/ann_train_aligned.txt", "r")
+    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/"
+              "ann_code_src/ann_file/trainval_lst/train_19_1_16_20_0.3.txt", "w")
     contx = rf.readline()
     ctx_str = ""
 

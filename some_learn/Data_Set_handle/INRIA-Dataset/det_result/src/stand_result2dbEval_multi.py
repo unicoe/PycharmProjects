@@ -55,7 +55,8 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/11_30_1/PA-MS FCN.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/ETH-Dataset/result/ETH-500-51.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/ETH-Dataset/result/ETH-500_50.txt',
 
 ]
 

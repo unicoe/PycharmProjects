@@ -44,14 +44,15 @@ def generate_all_result(path):
     f_name = path.split("/")[-1]
     print "'"+f_name+ "',            0, clrs(299,:),  '-'"
     source_path = path
-    dest_path = "/home/user/Downloads/caltech_data_set/data-INRIA/res/" + f_name
+    dest_path = "/home/user/Downloads/caltech_data_set/data-ETH/res/" + f_name
+    #dest_path = "/home/user/Downloads/caltech_data_set/data-INRIA/res/" + f_name
     shutil.move(source_path, dest_path)
 
 
 file_lst = [
 
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/INRIA-Dataset/det_result/det/11_30_1/PA-MS FCN.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/ETH-Dataset/result/ETH-500-51.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/ETH-Dataset/result/ETH-500_50.txt',
 
 
 ]

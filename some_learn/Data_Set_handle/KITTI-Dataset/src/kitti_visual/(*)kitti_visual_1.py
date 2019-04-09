@@ -54,7 +54,7 @@ def draw_bbox(file_idx, tmp_dict):
     undet_img = []
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
-    cur_path = "/home/user/Disk1.8T/data_set/KITTI/testing/image_2"
+    cur_path = "/home/user/Disk1.8T/data_set/KITTI/testing/image_2_test"
 
     # sub det
     # cur_path ="/home/user/Disk1.8T/data_set/testing/image_2"
@@ -93,6 +93,8 @@ def draw_bbox(file_idx, tmp_dict):
                     cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
                     cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
 
+
+
             if flag == 1:
                 img_cnt = img_cnt + 1
 
@@ -100,6 +102,9 @@ def draw_bbox(file_idx, tmp_dict):
                 cv2.imwrite('/home/user/Disk1.8T/draw_result/kitti/submit/' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png",
                             im)
+            plt.title(bot)
+            plt.imshow(im)
+            plt.show()
             else:
                 undet_img.append(bot)
 
@@ -129,8 +134,9 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_16_15_09_det_test_person.txt',
-
+#'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_16_15_09_det_test_person.txt',
+#"/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/2018_12_07_Fri_22_56_43_det_test_person.txt"
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/src/submit/result-kitti-test.txt"
 ]
 
 for file_idx in file_lst:

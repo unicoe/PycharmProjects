@@ -2,7 +2,7 @@
 
 def extrat_info():
     rf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/ann_train_aligned.txt", "r")
-    wf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/out_train_11_6.txt", "w")
+    wf = open("/home/user/PycharmProjects/some_learn/CityPersons_handle/out_train_19_1_16.txt", "w")
     contx = rf.readline()
     ctx_str = ""
 

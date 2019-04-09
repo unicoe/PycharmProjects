@@ -50,8 +50,9 @@ def generate_all_result(path):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/AVE-22k_nms_56-LAMR=4.54.txt',
+
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/drwa_pic/Adapted R-FCN(Ours).txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/drwa_pic/PAMS-FCN(Ours).txt',
 
 ]
 
@@ -61,5 +62,7 @@ for file_idx in file_lst:
     generate_all_result(save_path)
 
 """
+
+
 
 """

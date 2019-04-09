@@ -115,7 +115,7 @@ def folder_struct(level, path):
 
     cnt = 0
 
-    gt_info = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/gt_info.txt", "w")
+    gt_info = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/gt_info_20_10_0.3_zss.txt", "w")
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages/"
 
     print len(fileList)
@@ -173,8 +173,8 @@ def folder_struct(level, path):
                     w = int(xmax) - int(xmin)
                     h = int(ymax) - int(ymin)
 
-                    if tmpv[5] == '0' or rate >= 0.4:
-                        if h >= 40 and w >= 10:
+                    if tmpv[5] == '0' or rate >= 0.3:
+                        if h >= 20 and w >= 10:
                             cor_dict = {}
                             cor_dict["xmin"] = xmin
                             cor_dict["ymin"] = ymin

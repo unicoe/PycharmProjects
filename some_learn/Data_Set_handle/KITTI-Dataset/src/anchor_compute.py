@@ -5,8 +5,9 @@
 # @File    : anchor_compute.py
 # @Software: PyCharm
 import numpy as np
+print np.array((1.0, 1.26, 1.6, 2.02, 2.56, 3.24, 4.1, 5.18, 6.56, 8.29, 10.49), dtype=float)*2
 
-scale = [3.5, 4.41, 5.56, 7.0, 8.82, 11.12, 14.01, 17.65, 22.23, 28.02, 35.3]
+scale = [1.0, 1.26, 1.6, 2.02, 2.56, 3.24, 4.1, 5.18, 6.56, 8.29, 10.49] * 2
 
 # for i in range(len(scale)-1):
 #     print scale[i+1] / scale[i]
