@@ -15,8 +15,8 @@ while name_info:
 res_ls = [
 
 #'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_31_56_val_det.txt',
-'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_33_45_val_det.txt',
-'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_35_35_val_det.txt',
+'/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/nsetp/2019_05_09_Thu_18_46_25_val_det.txt',
+# '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_35_35_val_det.txt',
 # '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_37_25_val_det.txt',
 # '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_39_15_val_det.txt',
 # '/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_11_41_07_val_det.txt',

@@ -1,0 +1,81 @@
+ACF [19] channels AdaBoost INRIA evolution of ChnFtrs [source code]
+ACF++ [36] channels AdaBoost Caltech
+ACF-Caltech [19] channels AdaBoost Caltech evolution of ChnFtrs [source code]
+ACF-Caltech+ [35] channels AdaBoost Caltech uses deeper trees and denser sampling
+ACF+SDt [46] channels AdaBoost Caltech SDt = Stabilized Dt (motion features)
+AdaptFasterRCNN [67] pixels DeepNet Caltech+ ImageNet+CityPersons data
+AFS [25] multiple linear SVM INRIA accelerated version of FeatSynth
+AFS+Geo [25] multiple linear SVM INRIA variant of AFS with geometry constraints
+CCF [61] deep AdaBoost Caltech
+CCF+CF [61] deep+channels AdaBoost Caltech
+Checkerboards [66] channels AdaBoost Caltech
+Checkerboards+ [66] channels AdaBoost Caltech Checkerboards + flow-based features from [46]
+ChnFtrs [18] channels AdaBoost INRIA updated (see addendum on author website)
+CompACT-Deep [8] multiple boosting Caltech
+ConvNet [49] pixels DeepNet INRIA
+Crosstalk [15] channels AdaBoost INRIA
+DBN-Isol [37] HOG DeepNet INRIA
+DBN-Mut [40] HOG DeepNet INRIA/Caltech
+DeepCascade [2] pixels DeepNet Caltech
+DeepCascade+ [2] pixels DeepNet Caltech+ uses Caltech+ETH+Daimler for training
+DeepParts [53] pixels DeepNet Caltech
+FastCF [13] channels AdaBoost INRIA/Caltech 100 fps on a CPU
+FasterRCNN+ATT [68] pixels DeepNet Caltech+ ImageNet data
+F-DNN [20] pixels DeepNet Caltech+ ImageNet+ETH+TudBrussels data
+F-DNN+SS [20] pixels DeepNet Caltech+ ImageNet+Cityscapes+ETH+TudBrussels data
+F-DNN2+SS [21] pixels DeepNet Caltech+ ImageNet+Cityscapes+ETH+TudBrussels data
+FeatSynth [3] multiple linear SVM INRIA
+FisherBoost [50] HOG+COV FisherBoost INRIA
+FPDW [16] channels AdaBoost INRIA accelerated variant of ChnFtrs
+FtrMine [17] channels AdaBoost INRIA
+Franken [33] channels AdaBoost INRIA multiple occlusion specific models
+GDFL [28] pixels DeepNet Caltech+ ImageNet data
+HikSvm [31] HOG HIK SVM INRIA boundary effect fixed since publication
+HOG [14] HOG linear SVM INRIA
+HOG-LBP [58] HOG+LBP linear SVM INRIA
+InformedHaar [65] channels AdaBoost INRIA/Caltech
+JointDeep [38] color+gradient deep net INRIA/Caltech
+Katamari [6] channels AdaBoost INRIA/Caltech combines methods [4, 19, 35, 39, 46]
+LatSvm-V1 [22] HOG latent SVM PASCAL
+LatSvm-V2 [23] HOG latent SVM INRIA
+LDCF [35] channels AdaBoost Caltech locally decorrelated channel features
+LDCF++ [36] channels AdaBoost Caltech
+LFOV [1] pixels DeepNet Caltech
+MLS [34] HOG AdaBoost INRIA
+MOCO [10] HOG+LBP latent SVM Caltech
+MRFC+Semantic [12] channels boosting Caltech+ CamVid+SiftFlow+KITTI data for segm.
+MS-CNN [9] pixels deep net Caltech+ImageNet ImageNet pre-training
+MT-DPM [60] HOG latent SVM Caltech
+MT-DPM+Context [60] HOG latent SVM Caltech+ context obtained from a vehicle detector
+MultiFtr [59] multiple AdaBoost INRIA
+MultiFtr+CSS [56] multiple linear SVM TUD-Motion
+MultiFtr+Motion [56] multiple linear SVM TUD-Motion
+MultiResC [45] HOG latent SVM Caltech
+MultiSDP [63] HOG+CSS deep net INRIA/Caltech
+NAMC [54] channels AdaBoost INRIA/Caltech
+pAUCBoost [42] HOG+COV pAUCBoost INRIA optimized for low false-positives
+PCN [57] pixels deep net Caltech+ImageNet ImageNet pre-training
+Pls [48] multiple PLS+QDA INRIA
+PoseInv [29] HOG AdaBoost INRIA+ trained with annotated silhouettes
+PoseInvSvm [29] HOG kernel SVM INRIA+ trained with annotated silhouettes
+RandForest [32] HOG+LBP random forest INRIA/Caltech Caltech results include context (CGP)
+Roerei [5] channels AdaBoost INRIA
+RPN+BF [64] pixels DeepNet+AdaBoost Caltech+ImageNet ImageNet pre-training
+SA-FastRCNN [26] pixels deep net Caltech+ImageNet ImageNet pre-training
+SCCPriors [62] channels AdaBoost INRIA/Caltech
+SCF+AlexNet [24] pixels deep net Caltech+ImageNet ImageNet pre-training
+SDN [30] pixels deep net INRIA/Caltech
+SDS-RCNN [7] pixels deep net Caltech+ImageNet ImageNet pre-training
+Shapelet [47] gradients AdaBoost INRIA with boundary effects fixed [59]
+Shapelet-orig [47] gradients AdaBoost INRIA original implementation
+SketchTokens [27] channels AdaBoost INRIA+ Sketch Tokens were trained on BSDS
+SpatialPooling [43] multiple pAUCBoost INRIA/Caltech spatial pooling + shrinkage to avoid overfitting
+SpatialPooling+ [44] multiple pAUCBoost Caltech improved version of [42, 43] + flow features
+TLL-TFA [51] pixels deep net Caltech+ ImageNet+CityPersons data
+TA-CNN [52] pixels DeepNet Caltech++ augmented with external data
+UDN+ [41] pixels deep net Caltech+ImageNet ImageNet pre-training
+VeryFast [4] channels AdaBoost INRIA
+VJ [55] Haar AdaBoost INRIA implementation from [59]
+VJ-OpenCV [55] Haar AdaBoost INRIA implementation from OpenCV
+WordChannels [11] WordChannels AdaBoost INRIA/Caltech
+*+2Ped [39] HOG latent SVM INRIA+ adds 2-person detector as context

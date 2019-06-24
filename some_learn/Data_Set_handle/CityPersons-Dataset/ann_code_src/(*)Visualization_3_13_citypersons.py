@@ -164,7 +164,7 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                 #     gt_l.append(gt_y2)
 
                 for idx_res in resList:
-                    if float(idx_res[0]) < 0.5:
+                    if float(idx_res[0]) < 0.001:
                         continue
                     res_x1 = int(float(idx_res[1]))
                     res_y1 = int(float(idx_res[2]))
@@ -210,13 +210,13 @@ def show_IOU_gt_and_result(gt_dict, res_dict):
                     # cv2.putText(im, str(str(idx_tmp[5]) + " " + str(idx_tmp[0])), (int(res_x1), int(res_y1 - 6)), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.4,
                     #             (0, 0, 255))
                     # tmp_list.remove(idx_tmp)
-            save_path = '/home/user/Disk1.8T/draw_result/2019_04_08_Mon_12_48_16_val_det/test/'+dir_.split("/")[0]+ "/"
+            save_path = '/home/user/Disk1.8T/draw_result/2019_05_09_Thu_18_46_25_val_det/test/'+dir_.split("/")[0]+ "/"
             mkdir(save_path)
             cv2.imwrite(save_path + str(dir_.split("/")[1]+ ".png"), im)
 
 gt_dict = generate_gt_dict("/home/user/PycharmProjects/some_learn/Data_Set_handle/CityPersons-Dataset/ann_code_src/info_txt.txt")
 
 
-file_path = "/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/1step/2019_04_08_Mon_12_48_16_val_det.txt.re"
+file_path = "/home/user/Disk1.8T/unicoe/ALFNet/output/valresults/resnet50/nsetp/2019_05_09_Thu_18_46_25_val_det.txt.re"
 res_dict = generate_result(file_path)
 show_IOU_gt_and_result(gt_dict, res_dict)

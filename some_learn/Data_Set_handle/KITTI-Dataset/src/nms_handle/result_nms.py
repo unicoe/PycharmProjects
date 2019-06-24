@@ -10,18 +10,7 @@ import nms
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_14_16_24_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_14_49_58_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_15_23_55_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_15_56_22_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_16_29_38_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_17_04_29_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_17_38_50_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_18_12_27_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_18_47_40_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_19_22_38_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_19_56_24_det_test_person.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/KITTI-Dataset/det_result/det/45_trainval_result/2018_11_30_Fri_20_31_10_det_test_person.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/5_26/2019_05_27_Mon_10_35_11.txt',
 
 ]
 
@@ -36,8 +25,8 @@ for file_idx in file_lst:
 
         res_list = content.strip("\n")
         # caltech inria eth
-        # pic_name = res_list[0:17]
-        # box_info = res_list[18:]
+        pic_name = res_list[0:17]
+        box_info = res_list[18:]
 
         #kitti
 
@@ -45,8 +34,8 @@ for file_idx in file_lst:
         # box_info = res_list[7:]
 
         #kitti test_
-        pic_name = res_list[0:11]
-        box_info = res_list[12:]
+        # pic_name = res_list[0:11]
+        # box_info = res_list[12:]
 
         if pic_name in result_dir :
             result_dir[pic_name].append(box_info)
@@ -59,7 +48,7 @@ for file_idx in file_lst:
     #test
     #print result_dir
 
-    nms_lst = [0.55]
+    nms_lst = [0.45, 0.46, 0.47, 0.48, 0.49, 0.5, 0.51, 0.52, 0.53, 0.54]
 
     for nms_num in nms_lst:
         w_path = r_path.strip("\n").split(".")[0] + "_nms_" + str(nms_num)[2:] +  ".txt"

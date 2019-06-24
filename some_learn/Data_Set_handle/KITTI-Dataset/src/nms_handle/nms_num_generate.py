@@ -7,7 +7,7 @@
 
 nms_num = []
 
-for i in range(56, 65):
+for i in range(45, 55):
     nms_num.append(i/100.0)
 
 print nms_num

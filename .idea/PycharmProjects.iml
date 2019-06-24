@@ -3,9 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/500/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result" />
       <excludeFolder url="file://$MODULE_DIR$/some_learn/Data_Set_handle/KITTI-Dataset/det_result/kitti-eval" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.12 (/usr/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

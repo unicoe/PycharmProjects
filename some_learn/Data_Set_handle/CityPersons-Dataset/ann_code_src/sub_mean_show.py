@@ -23,11 +23,12 @@ def compute(path):
     for file_name in file_names:
         img = cv2.imread(os.path.join(path, file_name), 1)
         img = img.astype(np.float32)
-        img -= [72.43, 82.28, 71.83]
+        img -= [72.43, 82.28, 71.83] # rgb
         # img -= [104,117,123]
         cv2.imshow("img", img)
         cv2.waitKey(0)
 
+#image channel-wise mean to subtract, the order is BGR
 
 if __name__ == '__main__':
     R, G, B = compute(path)
