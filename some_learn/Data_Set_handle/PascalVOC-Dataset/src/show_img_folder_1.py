@@ -12,7 +12,7 @@ folder_name = [
 # '/home/user/Disk1.8T/draw_result/augmentations/RandomSampleCrop_seglbl',
 # '/home/user/Disk1.8T/draw_result/augmentations/RandomSampleCrop_seglbl_weak',
 
-'/home/user/Disk1.8T/draw_result/augmentations/seglbl_6_4_1'
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/data/VOCdevkit/VOC0712/JPEGImages/MOT17-10'
 ]
 
 for folder in folder_name:

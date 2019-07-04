@@ -1,7 +1,7 @@
 #--coding:utf-8--
 import os
 import cv2
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def mkdir(path):
     import os
@@ -53,14 +53,6 @@ def draw_bbox(file_idx, tmp_dict):
     img_cnt = 0
     undet_img = []
 
-    tgt_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/res_ls/res_ls.txt", "r")
-    tg_ls = []
-    tg_info = tgt_r.readline()
-    while tg_info:
-        tg_tmp = tg_info.strip("\n")
-        tg_ls.append(tg_tmp)
-        tg_info = tgt_r.readline()
-
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
 
@@ -74,21 +66,17 @@ def draw_bbox(file_idx, tmp_dict):
         dirList.append(tmp_path)
 
     #获取当前图片的绝对路径，然后进行处理
-
     for idx_im in dirList:
         all_str = idx_im
         inDict = all_str.split("/")
         bot = inDict[-1][:-4]
         inDict_name = bot
 
-        if inDict_name in tmp_dict:
+        if inDict_name in tmp_dict :
 
             bboxList = tmp_dict[inDict_name]
             im = cv2.imread(all_str)
-            im = im[:, :, (2, 1, 0)]
-            plt.cla()
-            plt.axis("off")
-            plt.imshow(im)
+
             flag = 0
 
             for idx_bbox in bboxList:
@@ -101,33 +89,17 @@ def draw_bbox(file_idx, tmp_dict):
                 if float(idx_bbox[0]) >= 0.5:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
-                    # cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
-                    # cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
-                    # cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
-
-
-
-                    color = '#00FF7F'  # (1, 0, 0)
-                    rect = plt.Rectangle((x1, y1),
-                                         x2 - x1,
-                                         y2 - y1, fill=False,
-                                         edgecolor=color, linewidth=1.25)
-                    plt.gca().add_patch(rect)
-
-                    plt.gca().text(x1, y1-8,
-                                   '{:.3f}'.format(float(idx_bbox[0])),
-                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=9, color='white')
-            #plt.show()
+                    cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
+                    cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
+                    cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
 
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
-                #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
-                #             im)
-                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' +
-                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png")
+                mkdir('/home/user/Disk1.8T/draw_result/paper_result/' + folder_name + '/' + str(inDict[0]))
+                cv2.imwrite('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' +
+                            str(inDict[0]) + '/' + bot + ".jpg",
+                            im)
             else:
                 undet_img.append(bot)
 
@@ -157,7 +129,9 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt'
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/1_170_seg_merge_base512/res/2019_01_18_Fri_00_54_51.txt',
+
+
 
 ]
 

@@ -62,7 +62,7 @@ def draw_bbox(file_idx, tmp_dict):
         tg_info = tgt_r.readline()
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
-    cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
+    cur_path = "/home/user/Disk1.8T/data_set/MOT17Det/test"
 
     # sub det
     # cur_path ="/home/user/Disk1.8T/data_set/testing/image_2"
@@ -71,20 +71,26 @@ def draw_bbox(file_idx, tmp_dict):
 
     for file in files:
         tmp_path = cur_path + "/" + file
-        dirList.append(tmp_path)
+        fs = os.listdir(tmp_path)
+        for f in fs:
+            dirList.append((file +"/"+f).split(".")[0])
+            with open('/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/im_list/test1.txt', 'aw') as f1:
+                f1.write((file +"/"+f))
+                f1.write("\n")
 
     #获取当前图片的绝对路径，然后进行处理
 
     for idx_im in dirList:
         all_str = idx_im
         inDict = all_str.split("/")
-        bot = inDict[-1][:-4]
-        inDict_name = bot
+        bot = inDict[-1][:]
+        inDict_name = all_str
 
         if inDict_name in tmp_dict:
 
             bboxList = tmp_dict[inDict_name]
-            im = cv2.imread(all_str)
+            im_path = "/home/user/Disk1.8T/data_set/MOT17Det/test/" +all_str+'.jpg'
+            im = cv2.imread(im_path)
             im = im[:, :, (2, 1, 0)]
             plt.cla()
             plt.axis("off")
@@ -98,7 +104,7 @@ def draw_bbox(file_idx, tmp_dict):
                 x2 = int(float(idx_bbox[3]))
                 y2 = int(float(idx_bbox[4]))
 
-                if float(idx_bbox[0]) >= 0.5:
+                if float(idx_bbox[0]) >= 0.3:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
                     # cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
@@ -122,12 +128,12 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[0]))
                 # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
                 #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                 #             im)
                 plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' +
-                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png")
+                             str(inDict[0]) + '/' + bot + ".png")
             else:
                 undet_img.append(bot)
 
@@ -157,7 +163,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/2019_06_29_Sat_19_27_53.txt'
 
 ]
 
