@@ -208,10 +208,10 @@ def folder_struct(level, path):
 # folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
 
 # # zss caltech new 10x
-# folder_struct(1, "/home/user/Downloads/caltech_data_set/anno_train10x_alignedby_RotatedFilters")
+folder_struct(1, "/home/user/Downloads/caltech_data_set/anno_train10x_alignedby_RotatedFilters")
 
 # # old caltech 1x
 # folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx1/train/annotations")
 
 # old caltech 10x
-folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")
+# folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")

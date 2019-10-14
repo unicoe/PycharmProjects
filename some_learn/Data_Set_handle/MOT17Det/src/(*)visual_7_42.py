@@ -102,16 +102,16 @@ def draw_bbox(file_idx, tmp_dict):
                 x2 = int(float(idx_bbox[3]))
                 y2 = int(float(idx_bbox[4]))
 
-                if float(idx_bbox[0]) >= 0.3:
+                if float(idx_bbox[0]) >= 0.0001:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
                     # cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
                     # cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
                     # cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
 
-                    cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
+                    cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 2)
                     cv2.rectangle(im, (x1, y1), (x1 + 20, y1), (0, 255, 0), -1)
-                    cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
+                    cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.9, (255, 0, 0), 2)
 
             if flag == 1:
                 img_cnt = img_cnt + 1
@@ -151,7 +151,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/2019_06_29_Sat_19_27_53.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_29/7_250/2019_07_29_Mon_06_44_59.txt'
 
 ]
 

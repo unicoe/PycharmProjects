@@ -24,9 +24,9 @@ for file_idx in file_lst:
     while content:
 
         res_list = content.strip("\n")
-        # caltech inria eth
-        pic_name = res_list[0:17]
-        box_info = res_list[18:]
+        # MOT
+        pic_name = res_list[0:15]
+        box_info = res_list[16:]
 
         #kitti
 

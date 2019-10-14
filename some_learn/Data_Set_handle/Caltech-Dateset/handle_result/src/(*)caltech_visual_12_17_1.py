@@ -122,11 +122,11 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/paper_img_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                # cv2.imwrite('/home/user/Disk1.8T/paper_img_result/paper_result/submit/' + folder_name + '/' +
                 #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                 #             im)
-                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' +
+                plt.savefig('/home/user/Disk1.8T/paper_img_result/paper_result/select/' + folder_name + '/' +
                              str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png")
             else:
                 undet_img.append(bot)
@@ -157,7 +157,12 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/300/300.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/512/512.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/512_/512_.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/640_480/640_480.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/960_720/960_720.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/paper_img/differ_size/1280_960/1280_960.txt',
 
 ]
 

@@ -62,7 +62,7 @@ def draw_bbox(file_idx, tmp_dict):
         tg_info = tgt_r.readline()
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
-    cur_path = "/home/user/Disk1.8T/data_set/MOT17Det/test"
+    cur_path = "/home/user/Disk1.8T/data_set/MOT17Det/train"
 
     # sub det
     # cur_path ="/home/user/Disk1.8T/data_set/testing/image_2"
@@ -89,7 +89,7 @@ def draw_bbox(file_idx, tmp_dict):
         if inDict_name in tmp_dict:
 
             bboxList = tmp_dict[inDict_name]
-            im_path = "/home/user/Disk1.8T/data_set/MOT17Det/test/" +all_str+'.jpg'
+            im_path = "/home/user/Disk1.8T/data_set/MOT17Det/train/" +all_str+'.jpg'
             im = cv2.imread(im_path)
             im = im[:, :, (2, 1, 0)]
             plt.cla()
@@ -104,7 +104,7 @@ def draw_bbox(file_idx, tmp_dict):
                 x2 = int(float(idx_bbox[3]))
                 y2 = int(float(idx_bbox[4]))
 
-                if float(idx_bbox[0]) >= 0.3:
+                if float(idx_bbox[0]) >= 0.5:
                     flag = 1
                     bbox_cnt = bbox_cnt + 1
                     # cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 1)
@@ -163,7 +163,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/2019_06_29_Sat_19_27_53.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_10/2019_07_10_Wed_06_45_08.txt'
 
 ]
 

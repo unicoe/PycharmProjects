@@ -9,7 +9,7 @@ import os
 import cv2
 import numpy as np
 
-path = '/home/user/Disk1.8T/data_set/citypersons/JPEGImages'
+path = '/home/user/Disk1.8T/unicoe/pytorch-ssd-2/data/VOCdevkit/VOC0712/JPEGImages'
 
 
 def compute(path):

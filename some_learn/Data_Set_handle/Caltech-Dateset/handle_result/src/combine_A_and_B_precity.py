@@ -40,7 +40,18 @@ ls_a = [
 ls_b = [
 
 '/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual100000',
+
+]
+
+ls_c = [
+
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
+
+]
+
+ls_d = [
+
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
 
 ]
 

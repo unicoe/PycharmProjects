@@ -61,7 +61,6 @@ def draw_bbox(file_idx, tmp_dict):
         tg_ls.append(tg_tmp)
         tg_info = tgt_r.readline()
 
-
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
 
@@ -82,7 +81,7 @@ def draw_bbox(file_idx, tmp_dict):
         bot = inDict[-1][:-4]
         inDict_name = bot
 
-        if inDict_name in tmp_dict  and inDict_name in tg_ls :
+        if inDict_name in tmp_dict:
 
             bboxList = tmp_dict[inDict_name]
             im = cv2.imread(all_str)
@@ -115,9 +114,9 @@ def draw_bbox(file_idx, tmp_dict):
                                          edgecolor=color, linewidth=1.25)
                     plt.gca().add_patch(rect)
 
-                    plt.gca().text(x1, y1-2,
+                    plt.gca().text(x1, y1-8,
                                    '{:.3f}'.format(float(idx_bbox[0])),
-                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=12, color='white')
+                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=9, color='white')
             #plt.show()
 
             if flag == 1:
@@ -158,7 +157,8 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_10/2019_06_20_Thu_00_14_46_68.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_10/2019_06_19_Wed_11_43_49_63.txt'
+
 ]
 
 for file_idx in file_lst:

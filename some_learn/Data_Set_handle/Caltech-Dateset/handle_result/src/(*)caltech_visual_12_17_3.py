@@ -152,7 +152,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/paper_result/adapted_R-FCN.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_10/2019_06_20_Thu_00_14_46_68.txt'
 
 ]
 

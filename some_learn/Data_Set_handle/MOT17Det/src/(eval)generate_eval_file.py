@@ -67,17 +67,15 @@ def generate_eval_file(path):
 
 
 res_ls = [
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_32_48.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_45_13.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_57_36.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_10_10_00.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_10_22_23.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_10_34_46.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_10_46_36.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_10_58_22.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_11_10_07.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_11_21_56.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_11_33_45.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_20_04_25.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_21_24_13.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_22_44_23.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_00_04_43.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_01_24_33.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_02_44_48.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_04_04_32.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_05_24_36.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_06_44_37.txt',
 
 ]
 

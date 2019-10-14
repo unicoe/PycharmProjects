@@ -14,11 +14,13 @@ def mkdir(path):
     isExists = os.path.exists(path)
     if not isExists:
         os.makedirs(path)
-        print(path + 'ok')
+        print path + 'ok'
         return True
     else:
-        print(path + 'failed!')
+
+        print path + 'failed!'
         return False
+
 
 def generate_xml(file_root, file_info, obj):
     from lxml.etree import Element, SubElement, tostring
@@ -77,7 +79,7 @@ def generate_xml(file_root, file_info, obj):
     #file_root = '/home/user/Downloads/caltech_data_set/data_train/'
     # file_root = '/home/user/Downloads/caltech_data_set/30stepsize1_train/'
     file_name = file_root + file_info[0];
-    mkdir(file_name)
+    mkdir.mkdir(file_name)
     fw = open(file_name+"/"+file_info[1].split('.')[0]+".xml", 'w')
 
     fw.write(xml)
@@ -86,6 +88,7 @@ def generate_xml(file_root, file_info, obj):
 
     #for debug
     #print xml
+
 
 
 def folder_struct(level, path):
@@ -111,8 +114,8 @@ def folder_struct(level, path):
             folder_struct((int(dirList[0]) + 1), path+'/'+dl)
 
     cnt = 0
-    h_f = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/caltech_new_anno/src/analysic_src/h_info.txt", "w")
 
+    gt_info = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/lst/new10x_gt_info_20_zss_vis.txt", "w")
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages/"
 
     print len(fileList)
@@ -136,7 +139,9 @@ def folder_struct(level, path):
                     fileInfo.append("VOC0712")
                     fileInfo.append(fl.split('.')[0]+'.jpg')
                     im_path = cur_path + fl.split('.')[0]+'.jpg'
-
+                    gt_info.write("\n")
+                    gt_info.write(fl.split('.')[0])
+                    gt_info.write(" ")
                 flag = 1
 
                 cnt += 1
@@ -163,24 +168,30 @@ def folder_struct(level, path):
                         bbox_size = (int(xmax) - int(xmin)) * (int(ymax) - int(ymin))
                         vis_bbox_size = (int(v_xmax) - int(v_xmin)) * (int(v_ymax) - int(v_ymin))
 
-                        rate = vis_bbox_size / (bbox_size + 0.0)
+                        rate = vis_bbox_size / (bbox_size + 0.1)
 
                     w = int(xmax) - int(xmin)
                     h = int(ymax) - int(ymin)
 
-                    if tmpv[5] == '0' or rate >= 0.4:
-                        if h >= 0 and w >= 0:
-                            cor_dict = {}
-                            cor_dict["xmin"] = xmin
-                            cor_dict["ymin"] = ymin
-                            cor_dict["xmax"] = xmax
-                            cor_dict["ymax"] = ymax
-
-                            h_f.write(str(int(ymax)-int(ymin)))
-                            h_f.write("\n")
-
-                            obj.append(cor_dict)
-                        rate = 0
+                    if tmpv[5] == '1':
+                        gt_info.write(v_xmin)
+                        gt_info.write(",")
+                        gt_info.write(v_ymin)
+                        gt_info.write(",")
+                        gt_info.write(v_xmax)
+                        gt_info.write(",")
+                        gt_info.write(v_ymax)
+                        gt_info.write(" ")
+                        # rate = 0
+                    else:
+                        gt_info.write(xmin)
+                        gt_info.write(",")
+                        gt_info.write(ymin)
+                        gt_info.write(",")
+                        gt_info.write(xmax)
+                        gt_info.write(",")
+                        gt_info.write(ymax)
+                        gt_info.write(" ")
 
             else:
                 if flag == 0:
@@ -189,9 +200,21 @@ def folder_struct(level, path):
                 flag = 1
 
 
+        if len(obj) != 0:
 
+            pass
     print cnt
     pass
-    h_f.close()
+    gt_info.close()
 
-folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
+# # zss caltech new 1x
+# folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/anno_train_1xnew")
+
+# # zss caltech new 10x
+folder_struct(1, "/home/user/Downloads/caltech_data_set/anno_train10x_alignedby_RotatedFilters")
+
+# # old caltech 1x
+# folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx1/train/annotations")
+
+# old caltech 10x
+# folder_struct(1, "/home/user/Downloads/caltech_data_set/datasets/caltechx10/train/annotations")

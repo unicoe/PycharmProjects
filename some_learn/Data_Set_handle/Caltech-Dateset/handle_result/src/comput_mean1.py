@@ -9,7 +9,7 @@ import os
 import cv2
 import numpy as np
 
-path = '/home/user/Disk1.8T/data_set/citypersons/JPEGImages'
+path = '/home/user/Disk1.8T/unicoe/pytorch-ssd-2/data/VOCdevkit/VOC0712/JPEGImages'
 
 
 def compute(path):
@@ -22,9 +22,10 @@ def compute(path):
         file_names = os.listdir(tmp_path)
         for file_name in file_names:
             img = cv2.imread(os.path.join(tmp_path, file_name), 1)
-            per_image_Bmean.append(np.mean(img[:, :, 0]))
-            per_image_Gmean.append(np.mean(img[:, :, 1]))
-            per_image_Rmean.append(np.mean(img[:, :, 2]))
+            if img is not None:
+                per_image_Bmean.append(np.mean(img[:, :, 0]))
+                per_image_Gmean.append(np.mean(img[:, :, 1]))
+                per_image_Rmean.append(np.mean(img[:, :, 2]))
     R_mean = np.mean(per_image_Rmean)
     G_mean = np.mean(per_image_Gmean)
     B_mean = np.mean(per_image_Bmean)

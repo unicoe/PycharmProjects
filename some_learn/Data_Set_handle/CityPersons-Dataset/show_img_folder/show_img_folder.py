@@ -11,7 +11,7 @@ folder_name = [
 # '/home/user/Disk1.8T/draw_result/augmentations/RandomSampleCrop_seglbl',
 # '/home/user/Disk1.8T/draw_result/augmentations/RandomSampleCrop_seglbl_weak',
 
-'/home/user/Disk1.8T/data_set/cityspaces/concat_channel/bochum'
+'/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-10'
 ]
 
 for folder in folder_name:

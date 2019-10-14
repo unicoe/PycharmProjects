@@ -116,7 +116,7 @@ def show_img(data_path):
             else:
                 im_bbox[line_info[0]] = [[line_info[2], line_info[3], line_info[4], line_info[5],]]
 
-    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/anno/lst/MOT2017Det_6_24_05.txt", "aw")
+    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/anno/lst/MOT2017Det_7_09_05.txt", "aw")
 
     for i_im, i_bbox in im_bbox.items():
         #print(i_im, i_bbox)
@@ -161,14 +161,14 @@ def show_img(data_path):
 if __name__ == "__main__":
 
     path_ls = [
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-02",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-04",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-09",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-10",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-11",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-13",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-02",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-04",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-09",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-10",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-11",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-13",
 
-        #"/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-05",
+        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-05",
     ]
 
     for i_p in path_ls:

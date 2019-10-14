@@ -128,15 +128,15 @@ def show_img(data_path):
 
         im_name = pre_zero + i_im
 
-        img = PIL.Image.new("P", (1920, 1080), color=0)
+        img = PIL.Image.new("P", (640, 480), color=0)
         draw2 = ImageDraw.Draw(img)
 
         # 将一张图片中所有的框集合起来，然后再画出来
         for i in i_bbox:
             x1 = max(1,int(i[0]))
             y1 = max(1,int(i[1]))
-            w  = min(int(i[2]),1920)
-            h  = min(int(i[3]),1080)
+            w  = min(int(i[2]),640)
+            h  = min(int(i[3]),480)
             if h > 40:
                 #print(w/(h+0.0))
                 #cv2.rectangle(im, (x1, y1), (x1 + w, y1 + h), (255, 0, 0), 3)
@@ -153,14 +153,14 @@ def show_img(data_path):
 if __name__ == "__main__":
 
     path_ls = [
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-02",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-04",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-09",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-10",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-11",
-        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-13",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-02",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-04",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-09",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-10",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-11",
+        # "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-13",
 
-        #"/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-05",
+        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-05",
     ]
 
     for i_p in path_ls:

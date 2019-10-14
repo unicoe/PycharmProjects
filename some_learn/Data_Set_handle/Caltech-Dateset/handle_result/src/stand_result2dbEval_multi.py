@@ -57,18 +57,7 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_21_01_26.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_21_29_16.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_21_57_08.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_22_24_32.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_22_51_12.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_23_17_45.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_20_Thu_23_44_27.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_21_Fri_00_11_36.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_21_Fri_00_38_18.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_21_Fri_01_04_55.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_21_Fri_01_32_45.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_24/2019_06_21_Fri_02_02_40.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt',
 
 ]
 
