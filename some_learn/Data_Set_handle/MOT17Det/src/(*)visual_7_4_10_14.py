@@ -91,8 +91,10 @@ def draw_bbox(file_idx, tmp_dict):
             bboxList = tmp_dict[inDict_name]
             im_path = "/home/user/Disk1.8T/data_set/MOT17Det/train/" +all_str+'.jpg'
             im = cv2.imread(im_path)
-            #im = im[:, :, (2, 1, 0)]
-
+            im = im[:, :, (2, 1, 0)]
+            plt.cla()
+            plt.axis("off")
+            plt.imshow(im)
             flag = 0
 
             for idx_bbox in bboxList:
@@ -109,19 +111,29 @@ def draw_bbox(file_idx, tmp_dict):
                     # cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
                     # cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
 
-                    cv2.rectangle(im, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                    cv2.rectangle(im, (x1, y1), (x1 + 20, y1), (0, 255, 0), -1)
-                    cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.9, (255, 0, 0), 2)
+
+
+                    color = '#00FF7F'  # (1, 0, 0)
+                    rect = plt.Rectangle((x1, y1),
+                                         x2 - x1,
+                                         y2 - y1, fill=False,
+                                         edgecolor=color, linewidth=1.25)
+                    plt.gca().add_patch(rect)
+
+                    plt.gca().text(x1, y1-8,
+                                   '{:.3f}'.format(float(idx_bbox[0])),
+                                   bbox=dict(facecolor=color, alpha=0.5), fontsize=9, color='white')
+            #plt.show()
 
             if flag == 1:
                 img_cnt = img_cnt + 1
 
                 mkdir('/home/user/Disk1.8T/paper_img_result/paper_result/' + folder_name + '/' + str(inDict[0]))
-                cv2.imwrite('/home/user/Disk1.8T/paper_img_result/paper_result/' + folder_name + '/' +
-                            str(inDict[0]) + '/' + bot + ".jpg",
-                            im)
-            #plt.show()
-
+                # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
+                #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
+                #             im)
+                plt.savefig('/home/user/Disk1.8T/paper_img_result/paper_result/' + folder_name + '/' +
+                             str(inDict[0]) + '/' + bot + ".png")
             else:
                 undet_img.append(bot)
 
@@ -150,9 +162,10 @@ def str2float_in_list(str_list):
     return float_list
 
 file_lst = [
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_20_04_25.txt",
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_32_48.txt",
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_1/2019_08_01_Thu_08_49_48.txt',
 
-"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/AD-SSD.txt",
-"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/SSD+SEG+VIS.txt"
 ]
 
 for file_idx in file_lst:

@@ -131,7 +131,6 @@ def draw_bbox(file_idx, tmp_dict):
             else:
                 undet_img.append(bot)
 
-    #print str(undet_img)
     w_undet = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/paper_result/" + folder_name + ".txt", "w")
 
     for idx in undet_img:

@@ -49,9 +49,8 @@ def generate_all_result(path):
 
 
 file_lst = [
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt',
-
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/sub_12_11/ssd_seg_vis_merge.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/sub_12_11/ssd_vis_merge.txt',
 ]
 
 

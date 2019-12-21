@@ -49,11 +49,7 @@ def generate_all_result(path):
 
 
 file_lst = [
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_9/3_82/2019_03_09_Sat_08_58_19.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_9/3_82/2019_03_09_Sat_09_16_35.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_9/3_82/2019_03_09_Sat_09_34_03.txt',
-
-
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/drwa_pic/PAMS-FCN(Ours).txt"
 ]
 
 

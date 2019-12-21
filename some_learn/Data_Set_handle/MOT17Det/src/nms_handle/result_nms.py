@@ -10,8 +10,14 @@ import nms
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_10/2019_07_10_Wed_10_30_09.txt',
-
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/1/AD-SSD_04.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/1/AD-SSD_0213.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/1/AD-SSD_0509.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/1/AD-SSD_1011.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/2/SSD_SEG_VIS_04.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/2/SSD_SEG_VIS_0213.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/2/SSD_SEG_VIS_0509.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_det/2/SSD_SEG_VIS_1011.txt',
 ]
 
 for file_idx in file_lst:
@@ -48,7 +54,7 @@ for file_idx in file_lst:
     #test
     #print result_dir
 
-    nms_lst = [0.45, 0.46, 0.47, 0.48, 0.49, 0.5, 0.51, 0.52, 0.53, 0.54, 0.55, 0.56, 0.57, 0.58, 0.59, 0.60]
+    nms_lst = [0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3, 0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49, 0.50]
 
     for nms_num in nms_lst:
         w_path = r_path.strip("\n").split(".")[0] + "_nms_" + str(nms_num)[2:] +  ".txt"

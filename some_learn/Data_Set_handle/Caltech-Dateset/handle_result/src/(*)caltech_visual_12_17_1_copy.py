@@ -31,8 +31,6 @@ def generate_result(resource_path):
     tmp_dict = {}
 
     while content:
-        #print content
-
         res = content.replace("\n", "").split(" ")
         cls  = str(res[0:1][0])
         bbox = res[1:6]
@@ -53,13 +51,6 @@ def draw_bbox(file_idx, tmp_dict):
     img_cnt = 0
     undet_img = []
 
-    tgt_r = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/res_ls/res_ls.txt", "r")
-    tg_ls = []
-    tg_info = tgt_r.readline()
-    while tg_info:
-        tg_tmp = tg_info.strip("\n")
-        tg_ls.append(tg_tmp)
-        tg_info = tgt_r.readline()
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
@@ -74,7 +65,6 @@ def draw_bbox(file_idx, tmp_dict):
         dirList.append(tmp_path)
 
     #获取当前图片的绝对路径，然后进行处理
-
     for idx_im in dirList:
         all_str = idx_im
         inDict = all_str.split("/")
@@ -105,8 +95,6 @@ def draw_bbox(file_idx, tmp_dict):
                     # cv2.rectangle(im, (x1, y1), (x1 + 20, y1 - 10), (0, 255, 0), -1)
                     # cv2.putText(im, str(float(idx_bbox[0]))[:4], (x1, y1), 0, 0.3, (0, 0, 0), 1)
 
-
-
                     color = '#00FF7F'  # (1, 0, 0)
                     rect = plt.Rectangle((x1, y1),
                                          x2 - x1,
@@ -121,7 +109,7 @@ def draw_bbox(file_idx, tmp_dict):
 
             if flag == 1:
                 img_cnt = img_cnt + 1
-
+                # 保存结果路径
                 mkdir('/home/user/Disk1.8T/draw_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
                 # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
                 #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
@@ -131,7 +119,7 @@ def draw_bbox(file_idx, tmp_dict):
             else:
                 undet_img.append(bot)
 
-    #print str(undet_img)
+
     w_undet = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/paper_result/" + folder_name + ".txt", "w")
 
     for idx in undet_img:
@@ -157,7 +145,7 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_10/2019_06_19_Wed_11_43_49_63.txt'
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/AVE-22k_nms_56-LAMR=4.54.txt'
 
 ]
 

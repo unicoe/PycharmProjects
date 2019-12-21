@@ -70,13 +70,82 @@ def draw_bbox(file_idx, tmp_dict):
 
     #获取当前图片的绝对路径，然后进行处理
 
+    im_name_ls = [
+
+        # 'set06_V002_I00029',
+        # 'set06_V002_I00729',
+        # 'set06_V002_I00839',
+        # 'set06_V002_I01499',
+        # 'set06_V002_I01619',
+        # 'set06_V002_I01559',
+        # 'set06_V002_I01619',
+        # 'set06_V002_I01739',
+        # 'set06_V010_I01799',
+        #
+        # 'set06_V012_I00749',
+        # 'set06_V013_I00629',
+        # 'set06_V013_I01739',
+        # 'set06_V015_I00359',
+        # 'set06_V015_I00509',
+        # 'set06_V015_I00539',
+        # 'set06_V015_I00899',
+        # 'set06_V015_I01379',
+        # 'set06_V015_I01829',
+        #
+        # 'set06_V016_I00019',
+        # 'set06_V016_I00599',
+        # 'set06_V016_I00719',
+        #
+        # 'set06_V017_I01799',
+        #
+        # 'set07_V000_I00569',
+        # 'set07_V000_I00839',
+        # 'set07_V000_I00869',
+        # 'set07_V000_I00899',
+        # 'set07_V000_I01049',
+        # 'set07_V000_I01619',
+        #
+        # 'set07_V003_I00659',
+        # 'set07_V003_I01349',
+        # 'set07_V003_I01499',
+        # 'set07_V005_I01769',
+        # 'set07_V005_I01799',
+        # 'set07_V008_I00779',
+        # 'set07_V008_I01049',
+        #
+        # 'set10_V009_I00659',
+        # 'set10_V010_I00419',
+        # 'set10_V010_I01439',
+        # 'set10_V011_I00629',
+
+
+        "set06_V003_I00119",
+        "set06_V004_I00029",
+        "set06_V004_I01739",
+        "set06_V005_I00029",
+        "set06_V005_I00059",
+        "set06_V005_I00359",
+        "set06_V006_I00209",
+        "set06_V010_I00389",
+        "set06_V017_I01349",
+        "set07_V011_I00059",
+        "set08_V002_I00509",
+        "set08_V009_I00239",
+        "set09_V001_I01559",
+        "set09_V008_I01589",
+        "set10_V011_I00149",
+
+
+
+    ]
+
     for idx_im in dirList:
         all_str = idx_im
         inDict = all_str.split("/")
         bot = inDict[-1][:-4]
         inDict_name = bot
 
-        if inDict_name in tmp_dict :
+        if inDict_name in tmp_dict  and inDict_name in im_name_ls:
 
             bboxList = tmp_dict[inDict_name]
             im = cv2.imread(all_str)
@@ -117,11 +186,11 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                mkdir('/home/user/Disk1.8T/draw_result/paper_result/submit1/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
                 # cv2.imwrite('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
                 #             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                 #             im)
-                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/submit/' + folder_name + '/' +
+                plt.savefig('/home/user/Disk1.8T/draw_result/paper_result/submit1/' + folder_name + '/' +
                              str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".png")
             else:
                 undet_img.append(bot)
@@ -152,7 +221,9 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/12_10/2019_06_20_Thu_00_14_46_68.txt'
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/anchor/20/2019_10_10_Thu_01_58_01.txt",
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_20/0/2019_06_20_Thu_00_14_46.txt',
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt",
 
 ]
 

@@ -54,6 +54,7 @@ def draw_bbox(file_idx, tmp_dict):
     undet_img = []
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
+    # 图片路径
     cur_path = "/home/user/py-R-FCN/data/VOCdevkit0712/VOC0712/JPEGImages"
 
     # sub det
@@ -96,14 +97,14 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' +
+                # 保存路径
+                mkdir('/home/user/Disk1.8T/paper_img_result/paper_result/select/' + folder_name + '/' + str(inDict[-3] + '/' + inDict[-2]))
+                cv2.imwrite('/home/user/Disk1.8T/paper_img_result/paper_result/select//' + folder_name + '/' +
                             str(inDict[-3] + '/' + inDict[-2]) + '/' + bot + ".jpg",
                             im)
             else:
                 undet_img.append(bot)
 
-    #print str(undet_img)
     w_undet = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/paper_result/" + folder_name + ".txt", "w")
 
     for idx in undet_img:
@@ -127,10 +128,10 @@ def str2float_in_list(str_list):
 
     return float_list
 
+# 检测结果列表
 file_lst = [
 
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/1_170_seg_merge_base512/res/2019_01_18_Fri_00_54_51.txt',
-
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/AVE-22k_nms_56-LAMR=4.54.txt",
 
 
 ]

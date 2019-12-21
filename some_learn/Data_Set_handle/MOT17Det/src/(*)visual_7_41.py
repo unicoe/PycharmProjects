@@ -96,8 +96,8 @@ def draw_bbox(file_idx, tmp_dict):
             if flag == 1:
                 img_cnt = img_cnt + 1
 
-                mkdir('/home/user/Disk1.8T/draw_result/paper_result/' + folder_name + '/' + str(inDict[0]))
-                cv2.imwrite('/home/user/Disk1.8T/draw_result/2019_01_18_Fri_00_54_51/' + folder_name + '/' +
+                mkdir('/home/user/Disk1.8T/paper_img_result/paper_result/' + folder_name + '/' + str(inDict[0]))
+                cv2.imwrite('/home/user/Disk1.8T/paper_img_result/paper_result/' + folder_name + '/' +
                             str(inDict[0]) + '/' + bot + ".jpg",
                             im)
             else:
@@ -128,8 +128,9 @@ def str2float_in_list(str_list):
     return float_list
 
 file_lst = [
-
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/1_170_seg_merge_base512/res/2019_01_18_Fri_00_54_51.txt',
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_20_04_25.txt",
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_32_48.txt",
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_1/2019_08_01_Thu_08_49_48.txt',
 
 
 

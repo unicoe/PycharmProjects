@@ -82,7 +82,7 @@ for i_im in im_ls:
 
             bbox_tmp.append(str2int(i_bbox))
             draw2.rectangle((0, 0, 0, 0), fill=(0, 0, 0))
-            draw2.rectangle((tmp[0]-3,tmp[1]-3, tmp[2]+3,tmp[3]+3), fill=(224, 224, 192))
+            #draw2.rectangle((tmp[0]-3,tmp[1]-3, tmp[2]+3,tmp[3]+3), fill=(224, 224, 192))
             draw2.rectangle((tmp[0], tmp[1], tmp[2], tmp[3]), fill=(128,0,0))
             # img = img[:,:,(2,1,0)]
             # debug 2018-12-06 22:12:56

@@ -28,7 +28,9 @@ def show_img(data_path):
     for i_im in os.listdir(img_path):
 
         im = cv2.imread(os.path.join(img_path, i_im))
-        im_resize = cv2.resize(im,(1920, 1080))
+        #im_resize = cv2.resize(im,(1920, 1080))
+        im_resize = cv2.resize(im,(640, 480))
+
         mkdir(os.path.join(img_path+'/tmp'))
         cv2.imwrite(os.path.join(img_path+"/tmp", i_im.split(".")[0]+'.png'), im_resize)
 
@@ -47,13 +49,29 @@ def show_img(data_path):
 if __name__ == "__main__":
 
     path_ls = [
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-02",
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-04",
-        #"/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-05",
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-09",
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-10",
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-11",
-        "/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-13",
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-02',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-04',
+#'/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-05',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-09',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-10',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-11',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/data/VOCdevkit/VOC0712/SegmentationClass_weak/MOT17-13',
+#
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-02',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-04',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-05',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-09',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-10',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-11',
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2-4/experments/7_131_seg_merge_base512/visual50000/MOT17-13',
+
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-02',
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-04',
+        '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-05',
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-09',
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-10',
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-11',
+        # '/home/user/Disk1.8T/unicoe/pytorch-fcn/experiments/8_9_0/visual/MOT17-13',
     ]
 
     for i_p in path_ls:

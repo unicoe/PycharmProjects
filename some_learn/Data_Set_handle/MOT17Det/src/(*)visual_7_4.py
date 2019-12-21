@@ -162,8 +162,9 @@ def str2float_in_list(str_list):
     return float_list
 
 file_lst = [
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_10/2019_07_10_Wed_06_45_08.txt'
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_20_04_25.txt",
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/7_4/2019_07_04_Thu_09_32_48.txt",
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_1/2019_08_01_Thu_08_49_48.txt',
 
 ]
 

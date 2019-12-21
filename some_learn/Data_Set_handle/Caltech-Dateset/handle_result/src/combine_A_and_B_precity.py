@@ -32,28 +32,28 @@ args = parser.parse_args()
 
 
 ls_a = [
+"/home/user/Disk1.8T/unicoe/pytorch-ssd-2-1/experments/6_180_seg_merge_base512/fcn_visual110000",
 
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual120000/',
 
 ]
 
 ls_b = [
 
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
+'/home/user/Disk1.8T/unicoe/pytorch-ssd-2-1/experments/6_180_seg_merge_base512/visual120000/',
 
 ]
 
-ls_c = [
-
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
-
-]
-
-ls_d = [
-
-'/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
-
-]
+# ls_c = [
+#
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
+#
+# ]
+#
+# ls_d = [
+#
+# '/home/user/Disk1.8T/unicoe/pytorch-ssd-2/experments/3_261_seg_merge_base512/visual110000',
+#
+# ]
 
 
 
@@ -81,13 +81,13 @@ for i_a in ls_a:
                 name_AB = name_A
                 # mkdir(img_fold_AB)
                 # path_AB = os.path.join(img_fold_AB, name_AB)
-
+                path_AB = "/home/user/Disk1.8T/draw_result/ssd_fcn/combine_ab1/" + name_AB
                 im_A = cv2.imread(path_A)
                 im_B = cv2.imread(path_B)
 
                 im_AB = np.vstack([im_A, im_B])
 
-                show = True
+                show = False
                 if show:
                     plt.figure(figsize=(12.8 * 2, 4.8 * 2))
                     plt.title(name_A)
@@ -97,4 +97,4 @@ for i_a in ls_a:
                     plt.show()
 
                 # save img
-                # cv2.imwrite(path_AB, im_AB)
+                cv2.imwrite(path_AB, im_AB)

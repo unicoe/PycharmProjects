@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 print 255*0.753
 print 255*0.502
 
-im = plt.imread("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/SegmentationClass/mask_img/2007_000129.png")
+im = plt.imread("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/src/000001.png")
 plt.interactive(False)
 
 plt.figure()

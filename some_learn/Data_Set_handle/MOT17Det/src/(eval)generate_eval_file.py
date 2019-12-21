@@ -1,3 +1,4 @@
+#--coding:utf-8--
 """
 MOT17-11/000479 0.1943 1198.38 -64.15 1456.84 516.38
 MOT17-11/000479 0.1932 1058.7 249.71 1169.88 663.98
@@ -32,6 +33,7 @@ def generate_eval_file(path):
         name1 = line_info[0].split("/")[0]
         name2 = line_info[0].split("/")[1]
 
+        # 生成临时文件
         mkdir( "/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/" \
                     + save_file_name)
         save_path = "/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/" \
@@ -67,16 +69,8 @@ def generate_eval_file(path):
 
 
 res_ls = [
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_20_04_25.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_21_24_13.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_20_Tue_22_44_23.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_00_04_43.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_01_24_33.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_02_44_48.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_04_04_32.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_05_24_36.txt',
-    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/8_16/2019_08_21_Wed_06_44_37.txt',
-
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/AD-SSD.txt',
+    '/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/SSD+SEG+VIS.txt',
 ]
 
 for i_path in res_ls:

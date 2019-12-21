@@ -62,7 +62,7 @@ def draw_bbox(file_idx, tmp_dict):
         tg_info = tgt_r.readline()
 
     folder_name = file_idx.strip("\n").split("/")[-1].split(".")[0]
-    cur_path = "/home/user/Disk1.8T/data_set/MOT17Det/train"
+    cur_path = "/home/user/Disk1.8T/data_set/MOT17Det/test"
 
     # sub det
     # cur_path ="/home/user/Disk1.8T/data_set/testing/image_2"
@@ -89,7 +89,7 @@ def draw_bbox(file_idx, tmp_dict):
         if inDict_name in tmp_dict:
 
             bboxList = tmp_dict[inDict_name]
-            im_path = "/home/user/Disk1.8T/data_set/MOT17Det/train/" +all_str+'.jpg'
+            im_path = "/home/user/Disk1.8T/data_set/MOT17Det/test/" +all_str+'.jpg'
             im = cv2.imread(im_path)
             #im = im[:, :, (2, 1, 0)]
 
@@ -151,8 +151,9 @@ def str2float_in_list(str_list):
 
 file_lst = [
 
-"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/AD-SSD.txt",
-"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/val_set/SSD+SEG+VIS.txt"
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/test_set/AD-SSD.txt",
+"/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/test_set/SSD+SEG+VIS.txt",
+
 ]
 
 for file_idx in file_lst:

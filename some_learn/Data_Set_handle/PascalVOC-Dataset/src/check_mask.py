@@ -3,13 +3,13 @@ import PIL
 from PIL import Image, ImageDraw
 import numpy as np
 
-seglbl1 = PIL.Image.open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/000148.jpg")
+seglbl1 = PIL.Image.open("/home/user/PycharmProjects/some_learn/Data_Set_handle/PascalVOC-Dataset/src/00000111.png")
 seglbl = seglbl1.convert('P')
 seglbl = np.array(seglbl, dtype=np.int32)
 
-print seglbl > 0
-print seglbl > 1
-print seglbl > 2
+print np.where(seglbl > 0)
+print np.where(seglbl == 1)
+print np.where(seglbl == 2)
 print seglbl > 3
 print seglbl > 4
 

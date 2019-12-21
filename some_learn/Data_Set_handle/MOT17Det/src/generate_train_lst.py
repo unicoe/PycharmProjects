@@ -7,7 +7,7 @@ def show_img(data_path):
     # data_path = "/home/unicoe/Desktop/train/MOT17-10"
 
     img_path = os.path.join(data_path)
-    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/anno/lst/test_06.txt", "aw")
+    wf = open("/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/anno/lst/train_13.txt", "aw")
     cnt = 0
     for i_im in os.listdir(img_path):
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         # "/home/user/Disk1.8T/data_set/MOT17Det/test/MOT17-12",
         # "/home/user/Disk1.8T/data_set/MOT17Det/test/MOT17-14",
 
-        "/home/user/Disk1.8T/data_set/MOT17Det/test/MOT17-06",
+        "/home/user/Disk1.8T/data_set/MOT17Det/train/MOT17-13",
     ]
 
     for i_p in path_ls:

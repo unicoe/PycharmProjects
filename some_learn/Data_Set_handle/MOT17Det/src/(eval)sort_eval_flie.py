@@ -1,3 +1,4 @@
+#--coding:utf-8--
 import re
 import shutil
 
@@ -36,9 +37,11 @@ def sort_file(path):
     wf.close()
 
     f_name = path.split("/")
+    # 测评结果存放的地方
     folder_name = "'/home/user/Downloads/amilan-motchallenge-devkit/res/MOT17Det/" + f_name[-2] + "',"
     folder_ls.add(folder_name)
     source_path = path
+    # 将测评结果放在对应的目录下
     mkdir("/home/user/Downloads/amilan-motchallenge-devkit/res/MOT17Det/" \
                 + f_name[-2])
     dest_path = "/home/user/Downloads/amilan-motchallenge-devkit/res/MOT17Det/" \
@@ -50,24 +53,11 @@ def sort_file(path):
 
 
 res_ls = [
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_20_04_25/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_20_04_25/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_21_24_13/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_21_24_13/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_22_44_23/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_20_Tue_22_44_23/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_00_04_43/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_00_04_43/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_01_24_33/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_01_24_33/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_02_44_48/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_02_44_48/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_04_04_32/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_04_04_32/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_05_24_36/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_05_24_36/MOT17-11.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_06_44_37/MOT17-10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/2019_08_21_Wed_06_44_37/MOT17-11.txt',
+
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/AD-SSD/MOT17-10.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/AD-SSD/MOT17-11.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/SSD+SEG+VIS/MOT17-10.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/MOT17Det/det_result/eval_file/SSD+SEG+VIS/MOT17-11.txt',
 
 ]
 

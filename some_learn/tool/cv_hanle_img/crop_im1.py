@@ -25,7 +25,11 @@ def mkdir(path):
         print(path + 'failed!')
         return False
 
-img_fold = "/home/user/Disk1.8T/draw_result/paper_result/mot_select/SSD_SEG_VIS/MOT17-01"
+# "/home/user/Disk1.8T/paper_img_result/paper_result/compare/2019_10_10_Thu_01_58_01",
+# "/home/user/Disk1.8T/paper_img_result/paper_result/compare/2019_06_20_Thu_00_14_46",
+# "/home/user/Disk1.8T/paper_img_result/paper_result/compare/2019_06_19_Wed_11_43_49",
+
+img_fold = "/home/user/Disk1.8T/draw_result/paper_result/submit1/2019_10_10_Thu_01_58_01/VOC0712/JPEGImages"
 
 img_list = os.listdir(img_fold)
 
@@ -34,7 +38,7 @@ num_imgs = min(1000000, len(img_list))
 for n in range(num_imgs):
     name = img_list[n]
     path = os.path.join(img_fold, name)
-    save_path = "/home/user/Disk1.8T/draw_result/paper_result/mot_select/crop/SSD_SEG_VIS/MOT17-01/"
+    save_path = "/home/user/Disk1.8T/draw_result/paper_result/submit1/2019_10_10_Thu_01_58_01/VOC0712/JPEGImages"
     mkdir(save_path)
     path1 = os.path.join(save_path, name)
     if os.path.isfile(path):
@@ -45,10 +49,8 @@ for n in range(num_imgs):
         # if show:
         #     plt.imshow(im)
         #     plt.show()
-        #
-        # import pdb
-        # pdb.set_trace()
-        rect = np.array([int(97-25), int(123-25), int(750), int(475+25)])
+        # caltech
+        rect = np.array([int(97), int(65), int(725), int(537)])
 
         # calculate IoU (jaccard overlap) b/t the cropped and gt boxes
 

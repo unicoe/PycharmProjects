@@ -56,9 +56,8 @@ def handle_result_for_eval(file_path, save_path):
         contx = readfile.readline()
 
 path_lst = [
-
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/6_19/1/2019_06_19_Wed_11_43_49.txt',
-
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/sub_12_11/ssd_seg_vis_merge.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/sub_12_11/ssd_vis_merge.txt',
 ]
 
 for pth_idx in path_lst:

@@ -57,18 +57,19 @@ def handle_result_for_eval(file_path, save_path):
 
 path_lst = [
 
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_12_25_49.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_12_36_18.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_12_47_23.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_12_55_56.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_13_10_36.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_13_21_10.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_13_35_07.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_13_47_38.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_13_58_07.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_14_10_45.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_14_22_18.txt',
-'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/3_18/2/2019_03_18_Mon_14_35_18.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_03_40_12.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_04_09_36.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_04_39_00.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_05_08_20.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_05_37_36.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_06_07_12.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_06_36_32.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_06_45_09.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_07_03_15.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_07_16_52.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_07_19_50.txt',
+'/home/user/PycharmProjects/some_learn/Data_Set_handle/Caltech-Dateset/handle_result/det_result/300500/500/2019_10_25_Frinms_55_2019_10_25_Fri_07_20_50.txt',
+
 ]
 
 for pth_idx in path_lst:

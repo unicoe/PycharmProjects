@@ -9,6 +9,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
+from matplotlib.ticker import FuncFormatter
 from matplotlib.font_manager import FontProperties
 
 def show_hog(path):
@@ -25,11 +26,17 @@ def show_hog(path):
 
     height = np.array(h_lst)
 
-    plt.hist(height, bins = [0,100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100], color='#1E90FF')
+    plt.hist(height, bins = [0,100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100],normed=True,  color='#1E90FF')
     font = FontProperties(fname=r"/home/user/PycharmProjects/SIMSUN.TTC", size=20)
     plt.title(u"MOT2017Det行人数据集", fontproperties=font)
     plt.xlabel(u"行人的高度" , fontproperties=font)
-    plt.ylabel(u"行人的数量" , fontproperties=font)
+    plt.ylabel(u"行人数量百分比" , fontproperties=font)
+
+    def to_percent(temp, position):
+        #print temp/len(h_lst)
+        return '%1.0f' % (10000*temp) + '%'
+
+    plt.gca().yaxis.set_major_formatter(FuncFormatter(to_percent))
     #plt.title("")from matplotlib.font_manager import FontProperties
     plt.show()
 
